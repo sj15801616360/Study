@@ -1,0 +1,32 @@
+<!--pages/mine/mine.wxml-->
+<view class='face_outer'>
+  <view class='face_border'>
+    <image src='{{avatarUrl}}' class='face'></image>
+  </view>
+  <view class='login'>{{login}}</view>
+</view>
+<image class='bg' src='https://www.xingyunxingqiu.cn/resources/images/beiguang.png'></image>
+<view class='navigations'>
+  <navigator class='navigation' url='../my_card/my_card'>
+    <image class='icon' src='https://www.xingyunxingqiu.cn/resources/images/mineCard.png'></image>
+    <text>使用记录</text>
+    <image class='jt' src='https://www.xingyunxingqiu.cn/resources/images/jt.png'></image>
+  </navigator>
+  <navigator class='navigation' url='../reply/reply'>
+    <image class='icon' src='https://www.xingyunxingqiu.cn/resources/images/contact.png'></image>
+    <text>宾客回复</text>
+    <image class='jt' src='https://www.xingyunxingqiu.cn/resources/images/jt.png'></image>
+  </navigator>
+  <!-- <navigator class='navigation'>
+    <image class='icon' src='https://www.xingyunxingqiu.cn/resources/images/contact1.png'></image>
+    <text>联系客服</text>
+    <image class='jt' src='https://www.xingyunxingqiu.cn/resources/images/jt.png'></image>
+</navigator> -->
+</view>
+<view class="btn-area">
+  <view class="img1" bindtap="toasta">贺卡</view>
+  <view class="img2" bindtap="toastb">我的</view>
+</view>
+<view class='shutter' bindtap='relogin' wx:if='{{canIUse==0}}'>
+
+</view>

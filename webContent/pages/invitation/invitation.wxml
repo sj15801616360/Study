@@ -1,0 +1,16 @@
+<!--pages/invitation/invitation.wxml-->
+<swiper indicator-dots='true' class='cards' indicator-active-color='rgb(255,255,255)' indicator-color='rgba(255,255,255,0.3)' circular='true'>
+  <block wx:for='{{cards}}'>
+    <swiper-item>
+      <view class='card' data-url='{{item.card_route}}'   data-cardId='{{item.card_id}}' hover-class="none" bindtap='jump'>
+        <image src='{{item.card_cover}}' class='card_img'>
+        </image>
+        <view>{{item.card_name}}</view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="btn-area">
+  <view class="img1" bindtap="toasta">贺卡</view>
+  <view class="img2" bindtap="toastb">我的</view>
+</view>

@@ -1,0 +1,505 @@
+/*pages/birthday_card1/birthday_card1.wxss */
+@import '../ddemo/ddemo.wxss';
+@import '../musicList/musicList.wxss';
+@import '../../template/qr_code.wxss';
+
+/*录音播放弹框*/
+
+.wx {
+  position: absolute;
+  bottom: 270rpx;
+  width: 300rpx;
+  height: 82rpx;
+  display: block;
+  left: 31%;
+  /*background: url('https://www.xingyunxingqiu.cn/resources/images/playso.png') no-repeat center;
+  background-size: 100% 100%;*/
+  z-index: 99;
+  /*text-align: left;*//*padding-left: 50rpx;*/
+  text-indent: 120rpx;
+  line-height: 82rpx;
+  color: #ddd;
+}
+
+.shownone {
+  height: 0;
+}
+
+.wx image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
+
+.recordshow {
+  opacity: 0;
+  animation: cont 4s;
+  -webkit-animation: cont 4s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes cont {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.yy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 199;
+}
+
+.yy .record {
+  background: #fff;
+  width: 100%;
+  height: 530rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 299;
+}
+
+.yy .record .img {
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+}
+
+.yy .record .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.yy .record .za {
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+.yy .record .zb {
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.yy .x {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  color: #000;
+  width: 47rpx;
+  height: 47rpx;
+}
+
+.yy .x image {
+  width: 100%;
+  height: 100%;
+}
+
+.yy .play {
+  margin: 450rpx auto 0 auto;
+  width: 256rpx;
+  height: 70rpx;
+}
+
+.yy .play .img1 {
+  width: 100%;
+  height: 100%;
+}
+
+.yy .play .img1 image {
+  width: 100%;
+  height: 100%;
+}
+
+.amend {
+  width: 80rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  color: #000;
+  position: absolute;
+  bottom: 292rpx;
+  right: 120rpx;
+  z-index: 99;
+}
+
+.bac-gray {
+  background: #ccc;
+}
+
+.fadeInUpaa {
+  background: url('../images/recordaa.png') no-repeat center;
+  animation-duration: 2s;
+}
+
+.dis {
+  display: none;
+}
+
+page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.back, .back_img {
+  height: 100%;
+  width: 100%;
+}
+
+.back_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+.note {
+  height: 60rpx;
+  width: 60rpx;
+  position: absolute;
+  top: 74rpx;
+  right: 30rpx;
+}
+
+.happy {
+  line-height: 70rpx;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  top: 740rpx;
+  color: #f6a6ac;
+  font-size: 70rpx;
+}
+
+.input {
+  width: 67%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  margin: 740rpx auto 0 auto;
+  font-size: 50rpx;
+  color: #3e91c7;
+  z-index: 199;
+}
+
+
+
+.photo1 {
+  height: 437rpx;
+  width: 437rpx;
+  border-radius: 50%;
+  background: #f3b6c1;
+  position: absolute;
+  left: 160rpx;
+  top: 207rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated04 {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated042 {
+  -webkit-animation-duration: 4.2s;
+  animation-duration: 4.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated02 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated03 {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated05 {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.background {
+  left: 165rpx;
+}
+
+.show {
+  animation: show linear 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.show_up {
+  animation: show_up linear 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show_up {
+  0% {
+    height: 0rpx;
+  }
+
+  100% {
+    height: 100rpx;
+  }
+}
+
+.frame {
+  height: 635rpx;
+  width: 561rpx;
+  position: absolute;
+  top: 48rpx;
+  left: 92rpx;
+  z-index: 10;
+}
+
+.back_choices {
+  height: 334rpx;
+  width: 100%;
+  background: #2f2f33;
+  position: absolute;
+  bottom: 0rpx;
+  left: 750rpx;
+  transition: left 0.2s linear;
+}
+
+.confirm_back {
+  height: 102rpx;
+  width: 100%;
+  background: #ec6096;
+  line-height: 102rpx;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  font-size: 46rpx;
+}
+
+.back_list {
+  padding-top: 24rpx;
+  padding-left: 20rpx;
+  height: 208rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.pink {
+  border: 6rpx #ec6096 solid;
+}
+
+.slip {
+  left: 0;
+}
+
+.animationdelay {
+  animation-delay: 2s;
+}
+
+.animationdelay01 {
+  animation-delay: 2s;
+}
+
+/**index.wxss**/
+
+.speak-style {
+  position: relative;
+  height: 240rpx;
+  width: 240rpx;
+  border-radius: 20rpx;
+  margin: 50% auto;
+  background: #26a5ff;
+}
+
+.item-style {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.text-style {
+  text-align: center;
+}
+
+.record-style {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 120rpx;
+  width: 100%;
+}
+
+.btn-style {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.sound-style {
+  position: absolute;
+  width: 74rpx;
+  height: 150rpx;
+  margin-top: 45rpx;
+  margin-left: 83rpx;
+}
+
+.board {
+  overflow: hidden;
+  border-bottom: 2rpx solid #26a5ff;
+}
+
+/* 图片编辑  部分属性是上面移下来的，小心重复-G*/
+
+.oni {
+  height: 360rpx;
+  width: 500rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 121rpx;
+  top: 280rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* background: red;*/
+  overflow: hidden;
+  transform:scale(1,1) 
+}
+
+.frame001 {
+  background: #f3b6c1;
+  width: 100%;
+  position: absolute
+}
+
+.pic_box {
+  height: 100%;
+  width: 100%;
+   display: flex;
+  align-items: center; 
+}
+
+.adjust {
+  height: 70rpx;
+  width: 460rpx;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*font-size: 30rpx;*/
+  background: #ec6096;
+  border-radius: 50rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 56%;
+  z-index: 99;
+}
+.cameraphoto {
+  position: absolute;
+  z-index: 99;
+  width: 108rpx;
+  height: 108rpx;
+  top: 406rpx;
+  left: 43%;
+}
+.adjust_a{
+  width: 40rpx;
+  height: 40rpx;
+}
+.adjust_b{
+  padding-top: 14rpx;
+}
+.adjust_c{
+  margin-right: 25rpx; 
+}
+.adjust_d{
+  margin-left: 25rpx;
+}
+
+
+/* 录音动画 -G*/
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.rr1,.rr2{
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  border: 2rpx #ec6096 solid;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx #ec6096;
+  box-sizing: border-box;
+  transform: scale(1);
+}
+.yy .record .img .running_roll{
+  animation: recording 1.5s linear ;
+  animation-iteration-count: infinite
+}
+.yy .record .img .running_roll.rr1{-webkit-animation-delay:0; }
+.yy .record .img .running_roll.rr2{ -webkit-animation-delay:0.75s; }
+@keyframes recording{
+  0% {transform:scale(1);opacty: 0}
+  50% {transform: scale(1.25);opacity: 0.5}
+  99% {transform: scale(1.5);opacity: 0}
+  100% {transform:scale(1);opacity: 0}
+}
+

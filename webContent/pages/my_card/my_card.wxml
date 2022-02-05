@@ -1,0 +1,19 @@
+<!--pages/my_card/my_card.wxml-->
+<block wx:for='{{logs}}' wx:key="no">
+<view data-url='{{item.card_route}}' data-orderid='{{item.order_id}}' bindtap='jump'> 
+    <view class='card' bindlongpress="editAddress" bindtouchstart="mytouchstart" bindtouchend="mytouchend" data-index="{{index}}" data-orderid='{{item.order_id}}' >
+      <image class='card_img' src='{{item.card_cover}}'></image>
+      <image class='close' data-index="{{index}}" src='../../image/close.png'></image>
+      <image class='projection' src='https://www.xingyunxingqiu.cn/resources/images/projection.png'></image>
+      <view class='tr'>
+        <text class='title'>{{item.card_name}}</text>
+        <view class='{{item.order_cate=="1"&&item.card_price==0?"free":"charge"}}'>{{item.order_cate==0?"未发送":''}}
+          <text wx:if='{{item.order_cate=="1"}}'>{{item.card_price=='0'?'已发送':'¥'+item.card_price}}</text>
+        </view>
+      </view>
+      <view class='time'>{{item.add_time}}</view>
+    </view>
+   </view> 
+</block>
+ <view class='nothing' wx-if='{{nothing==0}}'>暂无模版信息～</view>
+

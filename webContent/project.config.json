@@ -1,0 +1,68 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.4",
+	"appid": "wx368fa36087d10072",
+	"projectname": "%E6%B5%8B%E8%AF%9501",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "新年",
+					"pathName": "pages/newyear/newyear",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "情人节",
+					"pathName": "pages/love/love",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "婚礼",
+					"pathName": "pages/wedding1/wedding1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "生日01",
+					"pathName": "pages/birthday_card1/birthday_card1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "聚会",
+					"pathName": "pages/meet/meet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "年会",
+					"pathName": "pages/annual/annual",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,392 @@
+  <view class="mcontent" style='display:{{musicshow==1?"block":"none"}}'>
+    <view wx:for="{{list}}" wx:for-index="idx" data-idx="{{idx}}" wx:key="this" class="list" catchtap='check'>
+      <image wx:if="{{item.check}}" src='{{imgurl}}radio_check.png' class="radiocheck"></image>
+      <image wx:else src='{{imgurl}}radio.png' class="radiocheck"></image>
+      <view class="nameandTime">
+        <view class="name">{{item.music_name}}</view>
+        <view class="time">时长:{{item.music_duration}}</view>
+      </view>
+    </view>
+    <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='goback'>确定</view>
+  </view>
+
+  
+  <view bindtouchend="touchEnd" bindtouchstart="touchStart" class="container" style='display:{{indexshow==1?"block":"none"}}'>
+    <!--one-->
+    <view class="one {{ view[0].in }} {{ view[0].out }} {{ view[0].ui }}" style="width: 100%; height: 100%">
+      <view class='one_one bounceInRight animated delay'>Love to you</view>
+      <view class='one_two bounceInRight animated02 delay3' style='display:{{hide1==1?"block":"none"}}'>{{p1title}}</view>
+      <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p1title' class="one_two bac-gray" placeholder="相约一生" bindinput='title1' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+      </form>
+
+      <!--控制按键  -G-->
+          <view class='adjust adjust_aa' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_a' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_a' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+
+
+      <view class='one_three zoomIn animated delay'>
+        <view class='three_0'>
+          <view class="three_1000" style='transform:scale({{size_x_a}},{{size_y_a}});'>
+              <image src='{{p1==""?"https://www.xingyunxingqiu.cn/resources/images/love_004.png":p1[0]}}' class='img100111' style='top: {{top_a}}rpx;left:{{left_a}}rpx' mode='widthFix'></image>
+          </view>
+        </view>
+        <!-- <view class='three_0'>
+
+
+          <image class='img01' src='{{p1==""?"https://www.xingyunxingqiu.cn/resources/images/love_004.png":p1[0]}}'></image>
+          
+        </view> -->
+        <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto001" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p1'></image>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/love_001.png' class="img1 fadeInDown animated delay2"></image>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/love_002.png' class="img2 fadeInUp animated delay2"></image>
+      </view>
+      
+
+      <view class='one_five bounceInLeft animated delay'>we spend our lives in loving</view>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_005.png' class="img3 bounceInRight animated delay3"></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_006.png' class="img4 bounceInLeft animated delay3"></image>
+
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--two-->
+    <view class="two {{ view[1].in }} {{ view[1].out }} {{ view[1].ui }}" style="width: 100%; height: 100%">
+
+      <!--控制按键  -G-->
+          <view class='adjust adjust_bb' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_b' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_b' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+      <view class='two_one fadeInRight animated delay2'>
+        <view class="pic_box_a1wwwew">
+          <view class="pic_box_a1" style='transform:scale({{size_x_b}},{{size_y_b}});'>
+              <image src='{{p2==""?"https://www.xingyunxingqiu.cn/resources/images/love_007.png":p2[0]}}' class='img100111' style='top: {{top_b}}rpx;left:{{left_b}}rpx' mode='widthFix'></image>
+          </view>
+        </view>
+        
+        <!-- <image src='{{p2==""?"https://www.xingyunxingqiu.cn/resources/images/love_007.png":p2[0]}}' class="img1"></image> -->
+      </view>
+
+      <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto002" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p2'></image>
+      <view class='two_one_a fadeInLeft animated delay2'>Sweet love photo</view>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_011.png' class="img2 fadeInLeft animated delay2"></image>
+      <view class='clear'></view>
+      <view class='two_one_b fadeInRight animated delay3' style='display:{{hide1==1?"block":"none"}}'>{{p2title}}</view>
+      <form bindsubmit="formSubmit" >
+          <textarea type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p2title' class="two_one_b bac-gray" placeholder="凉凉天意潋滟一身花色一朵已放心上" bindinput='title2' maxlength='18' confirm-type="done" focus="{{focus}}"></textarea>
+      </form>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_013.png' class="img4 fadeInRight animated delay3"></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_021.png' class="img5 fadeInRight animated delay3"></image>
+
+      <!--控制按键  -G-->
+          <view class='adjust adjust_cc' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_c' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_c' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+      <view class='two_two fadeInLeft animated delay3'>
+        <view class='pic_box_a2wadsd'>
+          <view class="pic_box_a2" style='transform:scale({{size_x_c}},{{size_y_c}});'>
+              <image src='{{p3==""?"https://www.xingyunxingqiu.cn/resources/images/love_020.png":p3[0]}}' class='img100222' style='top: {{top_c}}rpx;left:{{left_c}}rpx' mode='widthFix'></image>
+          </view>
+        </view>
+        
+        <!-- <image src='{{p3==""?"https://www.xingyunxingqiu.cn/resources/images/love_020.png":p3[0]}}' class="img3"></image> -->
+      </view>
+      <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto003" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p3'></image>
+
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_014.png' class="img6"></image>
+
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--three-->
+    <view class="three {{ view[2].in }} {{ view[2].out }} {{ view[2].ui }}" style="width: 100%; height: 100%">
+      <view class='three_one'>
+        <view class='three_one_a fadeIn animated delay3'>美好的回忆</view>
+        <!-- <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p3content' class="three_one_a bac-gray" placeholder="美好的回忆" bindinput='p3content' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+        </form> -->
+        <image src='https://www.xingyunxingqiu.cn/resources/images/love_013.png' class="img4 fadeIn animated delay2"></image>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/love_021.png' class="img5 fadeIn animated delay2"></image>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/love_036.png' class="img1 fadeIn animated delay2"></image>
+      </view>
+
+      <!--控制按键  -G-->
+          <view class='adjust adjust_dd' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_d' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_d' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_d' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_d' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_d' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_d' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+      <view class='three_two fadeInLeft animated delay2'>
+        <view class='pic_box_a3wewd'>
+          <view class="pic_box_a3" style='transform:scale({{size_x_d}},{{size_y_d}});'>
+              <image src='{{p4==""?"https://www.xingyunxingqiu.cn/resources/images/love_0301.png":p4[0]}}' class='img100222' style='top: {{top_d}}rpx;left:{{left_d}}rpx' mode='widthFix'></image>
+          </view>
+        </view>
+        
+        <!-- <image src='{{p4==""?"https://www.xingyunxingqiu.cn/resources/images/love_0301.png":p4[0]}}' class="img3"></image> -->
+      </view>
+      <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto004" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p4'></image>
+      <view class='clear'></view>
+      <text class='three_three three_three_a fadeIn animated02 delay3' style='display:{{hide1==1?"block":"none"}}'>{{p4content}}</text>
+      <form bindsubmit="formSubmit" >
+          <textarea type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p4content' class="three_three three_three_a bac-gray" placeholder="我们的小窝 你精心布置每一个细节" bindinput='p4content' maxlength='15' confirm-type="done" focus="{{focus}}"></textarea>
+      </form>
+      <!-- <view class='three_three fadeIn animated02 delay3' style='display:{{hide1==1?"block":"none"}}'>{{p5content}}</view> -->
+      <!-- <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p5content' class="three_three bac-gray" placeholder="你精心布置每一个细节" bindinput='p5content' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+      </form> -->
+      <!--控制按键  -G-->
+        <view class='adjust adjust_ee' wx:if="{{hide1==0}}">
+          <view bindtap='enlarge_e' class="adjust_a adjust_d adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+          </view>
+          <view bindtap='narrow_e' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+          </view>
+          <view bindtap='m_up_e' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+          </view>
+          <view bindtap='m_down_e' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+          </view>
+          <view bindtap='m_left_e' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+          </view>
+          <view bindtap='m_right_e' class="adjust_a adjust_c adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+          </view>
+        </view>
+      <view class='three_five fadeInRight animated delay4'>
+        <view class='pic_box_a4sdssdw'>
+          <view class="pic_box_a4" style='transform:scale({{size_x_e}},{{size_y_e}});'>
+              <image src='{{p5==""?"https://www.xingyunxingqiu.cn/resources/images/love_030.png":p5[0]}}' class='img100222' style='top: {{top_e}}rpx;left:{{left_e}}rpx' mode='widthFix'></image>
+          </view>
+        </view>
+        
+      </view>
+
+      <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto005" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p5'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_035.png' class="img7 fadeInLeft animated delay2"></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_034.png' class="img8 fadeInRight animated02 delay4"></image>
+
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_014.png' class="img6"></image>
+
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--four-->
+    <view class="four {{ view[3].in }} {{ view[3].out }} {{ view[3].ui }}" style="width: 100%; height: 100%">
+      <view class="four_one fadeIn animated delay3">Love to you</view>
+      <view class="four_two fadeIn animated delay3">不刻意的浪漫</view>
+      <!-- <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p6content' class="four_two bac-gray" placeholder="不刻意的浪漫" bindinput='p6content' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+      </form> -->
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_031.png' class="img0 fadeIn animated delay2"></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_021.png' class="img5 fadeIn animated delay2"></image>
+      <text class="four_three four_three_a fadeIn animated02 delay5" style='display:{{hide1==1?"block":"none"}}'>{{p7content}}</text>
+      <!-- <view class="four_three fadeIn animated02 delay5" style='display:{{hide1==1?"block":"none"}}'>{{p8content}}</view>
+      <view class="four_three fadeIn animated02 delay5" style='display:{{hide1==1?"block":"none"}}'>{{p9content}}</view> -->
+
+      <form bindsubmit="formSubmit" >
+          <textarea type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p7content' class="four_three four_three_a bac-gray" placeholder="漫无目的牵手闲逛 虽不够浪漫却有小甜蜜 你说有我在身边就很浪漫" bindinput='p7content' maxlength='32' confirm-type="done" focus="{{focus}}"></textarea>
+      </form>
+      <!-- <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p8content' class="four_three bac-gray" placeholder="虽不够浪漫却有小" bindinput='p8content' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+      </form>
+      <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p9content' class="four_three bac-gray" placeholder="你说有我在身边就很浪漫" bindinput='p9content' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+      </form> -->
+
+      <!--控制按键  -G-->
+        <view class='adjust adjust_ff' wx:if="{{hide1==0}}">
+          <view bindtap='enlarge_f' class="adjust_a adjust_d adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+          </view>
+          <view bindtap='narrow_f' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+          </view>
+          <view bindtap='m_up_f' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+          </view>
+          <view bindtap='m_down_f' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+          </view>
+          <view bindtap='m_left_f' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+          </view>
+          <view bindtap='m_right_f' class="adjust_a adjust_c adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+          </view>
+        </view>
+      <view class='four_four fadeIn animated02 delay4'>
+        <view class='pic_box_aadffdfaa5'>
+          <view class="pic_box_aaaaaa5" style='transform:scale({{size_x_f}},{{size_y_f}});'>
+              <image src='{{p6==""?"https://www.xingyunxingqiu.cn/resources/images/love_040.png":p6[0]}}' class='imgq11111' style='top: {{top_f}}rpx;left:{{left_f}}rpx;' mode='widthFix'></image>
+          </view>
+        </view>
+        
+      </view>
+      <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto006" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p6'></image>
+
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_014.png' class="img6"></image>
+
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--five-->
+    <view class="five {{ view[4].in }} {{ view[4].out }} {{ view[4].ui }}" style="width: 100%; height: 100%" bindtouchstart='pullStart' bindtouchmove='pullMove' bindtouchend='pullEnd'>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_0501.png' class="img1 fadeIn animated delay"></image>
+      <!--控制按键  -G-->
+        <view class='adjust adjust_tt' wx:if="{{hide1==0}}">
+          <view bindtap='enlarge_t' class="adjust_a adjust_d adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+          </view>
+          <view bindtap='narrow_t' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+          </view>
+          <view bindtap='m_up_t' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+          </view>
+          <view bindtap='m_down_t' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+          </view>
+          <view bindtap='m_left_t' class="adjust_a adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+          </view>
+          <view bindtap='m_right_t' class="adjust_a adjust_c adjust_b">
+            <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+          </view>
+        </view>
+      <view class='five_one fadeIn animated delay2'>
+        <view class='pic_box_asdda7'>
+            <view class="pic_box_aa7" style='transform:scale({{size_x_t}},{{size_y_t}});'>
+              <image src='{{p7==""?"https://www.xingyunxingqiu.cn/resources/images/love_050.png":p7[0]}}' class='imgq11111' style='top: {{top_t}}rpx;left:{{left_t}}rpx;' mode='widthFix'></image>
+            </view>
+        </view>
+        
+        <!-- <image src='{{p7==""?"https://www.xingyunxingqiu.cn/resources/images/love_050.png":p7[0]}}' class="img4"></image> -->
+      </view>
+      <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto007" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p7'></image>
+      <text class='five_two fadeIn animated02 delay3' style='display:{{hide1==1?"block":"none"}}'>
+          {{p10content}}
+      </text>
+      <form bindsubmit="formSubmit" >
+          <textarea type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p10content' class="five_two bac-gray five_two_a" placeholder="你是我凝眸一生的身影，\n你是我相守相望的永恒，\n你是我美丽快乐的风景，\n你是我温暖明媚的心情。\n情人节，\n愿与你牵手，\n走那悠长的人生，\n任幸福甜蜜飞扬" bindinput='p10content' maxlength='75' confirm-type="done"></textarea>
+      </form>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/love_014.png' class="img6"></image>
+
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <view class='page6 {{pullUp==1?"pullUp":""}}' style='display:{{showP6==1?"block":"none"}}'>
+    <image src='../../image/close.png' class='close' bindtap='close'></image>
+    <view class='us_info'>
+      <view class='icon'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/qielogo.png'></image>
+        <text>企鹅贺卡</text>
+      </view>
+      <view class='scan'>
+        <image src='../../image/QR_code.jpg' class='QR_code'></image>
+        <view>扫码关注企鹅贺卡</view>
+      </view>
+      <view class='me_too' bindtap='jumpindex'>
+        <text>我也要制作贺卡</text>
+        <image src='../../image/me_too_button.png'></image>
+      </view>
+    </view>
+  </view>
+    <button wx:if="{{enter==0}}" class="btn" open-type="{{share}}" style='display:{{hide1==1?"block":"none"}}' bindtap='user_hide'>{{send}}</button>
+    <image src='https://www.xingyunxingqiu.cn/resources/images/music.png' class='music {{play==1?"note_roll":""}}' style='display:{{hide1==1?"block":"none"}}' bindtap='audioPlay'></image>
+    <!-- 编辑音乐 -->
+    <view class='selectmu' style='display:{{hide1==0?"block":"none"}}' catchtap='tapmusic'>换音乐</view>
+    <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='send'>预览</view>
+  </view>
+<!-- </scroll-view> -->
+
+<!-- 开场动画-->
+<view class='openanimation {{openanimation}}' style='display:{{indexshow==0?"block":"none"}}'>
+    <image src="../images/openstart.jpg" class="op-animation-bj"></image>
+    <view>
+      <image src="../images/openButton.png" class="openButton {{openButton}}" bindtap="buttonClick"></image>
+      <image src="../images/envelope.png" class="envelope"></image>
+      <image src="../images/envelopeUp.png" class="envelopeUp {{envelopeUp}}"></image>
+      <view class="jc {{z100}}">
+        <view class="jf {{jf}}">
+          <image src="../images/qingrjiekuail.png" class="envelopeContent"></image>
+        </view>
+      </view>
+      
+    </view>   
+</view>

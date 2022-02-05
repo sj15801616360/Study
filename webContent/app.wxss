@@ -1,0 +1,170 @@
+/**app.wxss**/
+   @import "pages/musicList/musicList.wxss";    
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  background: #fff;
+}
+
+image {
+  width: 0px;
+  height: 0px;
+}
+
+.preview {
+  position: fixed;
+  bottom: 0;
+  z-index: 103;
+  background: #ec6096;
+  color: #fff;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.music {
+  position: absolute;
+  z-index: 99;
+  width: 60rpx;
+  height: 60rpx;
+  top: 35rpx;
+  right: 30rpx;
+}
+
+.note_roll {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  animation: music 4s linear normal infinite;
+  -webkit-animation: music 4s linear normal infinite;
+}
+
+@keyframes music {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 选择音乐 */
+
+.selectmu {
+  position: absolute;
+  z-index: 99;
+  font-size: 15rpx;
+  right: 30rpx;
+  top: 35rpx;
+  background: #ec6096;
+  color: #fff;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+}
+.btn {
+  z-index: 110;
+  position: fixed;
+  width: 319rpx;
+  height: 84rpx;
+  border-radius: 30px;
+  background: #eb6298;
+  text-align: center;
+  line-height: 84rpx;
+  color: #fff;
+  left: 50%;
+  margin-left: -160rpx;
+  bottom: 50rpx;
+  box-shadow: 0px 3px 10px #cc8ea7;
+}
+
+/*开场动画*/
+.openanimation{
+  width: 750rpx;
+  height: 1206rpx;
+  position: relative;
+}
+.op-animation-bj{
+  position: absolute;
+  top: 20rpx;
+  left:30rpx;
+  width:690rpx;
+  height: 1160rpx;
+}
+  .envelope{
+    position: absolute;
+    top: 400rpx;
+    left: 138rpx;
+		width:474rpx;
+		height:296rpx;
+	  z-index:999;
+  }
+  .envelopeUp{
+    transition: -webkit-transform 1s linear 0.2s;
+    position: absolute;
+    top: 390rpx;
+    left: 138rpx;
+		width:470rpx;
+		height:210rpx;
+		z-index:9;
+  }
+  .openButton{
+    transition: display 0.2s;
+    position: absolute;
+    top: 495rpx;
+    left: 310rpx;
+		width:130rpx;
+		height:114rpx;
+		z-index:99999;
+		cursor: pointer;
+  }
+	.jf{
+	  transition:top 1s linear 1s,z-index 1s linear 1s,background 0.1s linear 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+		width:475rpx;
+		height:300rpx;
+		z-index:1;
+    overflow:hidden;
+		background:#FFEBEC;
+	}
+  .jc{
+    position: relative;
+    top: 390rpx;
+    left: 138rpx;
+		width:475rpx;
+		height:300rpx;
+		z-index:1;
+		background:#FFEBEC;
+  }
+	.envelopeContent{
+		width:475rpx;
+		height:324rpx;
+	}
+  .z100{
+    z-index:100;
+  }
+	.cha
+{
+transform:rotateX(180deg);
+-webkit-transform:rotateX(180deg); /* Safari and Chrome */
+transform-origin:center top;
+}
+	.cha2
+{
+top:-100rpx;
+z-index:99;
+background:transparent;
+}
+	.cha3
+{
+display:none;
+}
+	.cha4
+{
+opacity:0;
+}

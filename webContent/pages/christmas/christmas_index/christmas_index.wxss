@@ -1,0 +1,425 @@
+/* pages/christmas/christmas.wxss */
+@import'../../../template/qr_code.wxss';
+.bac-gray{
+  background:#cccccc;
+}
+/*录音播放弹框*/
+.wx{
+  position: absolute;
+  bottom: 540rpx;
+  width: 300rpx;
+  height: 82rpx;
+  display: block;
+  left: 31%;
+  /*-G 删除背景图片*/
+  z-index: 99;
+  text-indent: 120rpx;
+  line-height: 82rpx;
+  color: #dddddd;
+}
+/*-G图片添加新样式*/
+.wx image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
+/**/
+
+
+
+.recordshow{
+  opacity: 0;
+  animation: cont 4s;
+  -webkit-animation: cont 4s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.yy{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.5);
+  z-index: 199;
+}
+.yy .record{
+   background: #fff;
+   width: 100%;
+   height: 530rpx;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   z-index: 299;
+}
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.yy .record .za{
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 100rpx;
+}
+.yy .record .zb{
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.yy .x{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  color: #000000;
+  width: 47rpx;
+  height: 47rpx;
+}
+.yy .x image{
+  width: 100%;
+  height: 100%;
+}
+.yy .play{
+  margin:450rpx auto 0 auto;
+  width: 256rpx;
+  height: 70rpx;
+}
+.yy .play .img1{
+  width: 100%;
+  height: 100%;
+}
+.yy .play .img1 image{
+  width: 100%;
+  height: 100%;
+}
+.amend{
+  width: 80rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  color: #000;
+  position: absolute;
+  bottom:576rpx;
+  right: 120rpx;
+  z-index: 99;
+}
+
+
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 1206rpx;
+  color: #d85d50;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(20deg);
+  }
+}
+
+@keyframes ball02 {
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+@-webkit-keyframes ball02 {
+  to {
+    -webkit-transform: rotate(-20deg);
+  }
+}
+
+.ball01 {
+  position: absolute;
+  z-index: 99;
+  width: 89rpx;
+  height: 133rpx;
+  top: 42rpx;
+  left: 469rpx;
+  transform-origin: center top;
+  -webkit-transform-origin: center top;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  animation: rotate 2s ease-in-out alternate infinite;
+  -webkit-animation: rotate 2s ease-in-out alternate infinite;
+}
+
+.ball02 {
+  position: absolute;
+  z-index: 99;
+  width: 53rpx;
+  height: 154rpx;
+  top: 42rpx;
+  left: 599rpx;
+  transform-origin: center top;
+  -webkit-transform-origin: center top;
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  animation: ball02 2s ease-in-out alternate infinite;
+  -webkit-animation: ball02 2s ease-in-out alternate infinite;
+}
+
+.ball03 {
+  position: absolute;
+  z-index: 99;
+  width: 82rpx;
+  height: 214rpx;
+  top: 42rpx;
+  left: 40rpx;
+  transform-origin: center top;
+  -webkit-transform-origin: center top;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  animation: rotate 2s ease-in-out alternate infinite;
+  -webkit-animation: rotate 2s ease-in-out alternate infinite;
+}
+
+.ball04 {
+  position: absolute;
+  z-index: 99;
+  width: 63rpx;
+  height: 170rpx;
+  top: 42rpx;
+  left: 124rpx;
+  transform-origin: center top;
+  -webkit-transform-origin: center top;
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  animation: ball02 2s ease-in-out alternate infinite;
+  -webkit-animation: ball02 2s ease-in-out alternate infinite;
+}
+
+.happy {
+  position: absolute;
+  z-index: 99;
+  width: 515rpx;
+  height: 116rpx;
+  top: 233rpx;
+  left: 50%;
+  margin-left: -257.5rpx;
+  animation: happytop 2s;
+  -webkit-animation: happytop 2s;
+}
+
+@keyframes happytop {
+  0% {
+    top: 0rpx;
+  }
+
+  100% {
+    top: 233rpx;
+  }
+}
+
+@-webkit-keyframes happytop {
+  0% {
+    top: 0rpx;
+  }
+
+  100% {
+    top: 233rpx;
+  }
+}
+
+.christmas {
+  position: absolute;
+  z-index: 99;
+  width: 630rpx;
+  height: 414rpx;
+  /* top:400rpx;  */
+  bottom: 394rpx;
+  left: 50%;
+  margin-left: -315rpx;
+  animation: christmas 2s;
+  -webkit-animation: christmas 2s;
+}
+
+@keyframes christmas {
+  0% {
+    bottom: 0rpx;
+  }
+
+  100% {
+    bottom: 394rpx;
+  }
+}
+
+@-webkit-keyframes christmas {
+  0% {
+    bottom: 0rpx;
+  }
+
+  100% {
+    bottom: 394rpx;
+  }
+}
+
+.dear {
+  font-size: 30rpx;
+  position: absolute;
+  z-index: 99;
+  width: 566rpx;
+  top: 513rpx;
+  left: 50%;
+  opacity: 0;
+  margin-left: -283rpx;
+  animation: cont 4s;
+  -webkit-animation: cont 4s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.text {
+  font-size: 30rpx;
+  position: absolute;
+  z-index: 99;
+  width: 566rpx;
+  /* height: 340rpx; */
+  text-indent: 48rpx;
+  top: 568rpx;
+  left: 50%;
+  opacity: 0;
+  margin-left: -283rpx;
+  animation: cont 4s;
+  -webkit-animation: cont 4s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes cont {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cont {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 编辑页 */
+
+textarea {
+  position: absolute;
+  z-index: 99;
+  width: 547rpx;
+  height: 193rpx;
+  top: 580rpx;
+  left: 50%;
+  margin-left: -315rpx;
+  padding: 0rpx 40rpx 0rpx 40rpx;
+  font-size: 30rpx;
+}
+
+.toptext {
+  position: absolute;
+  width: 547rpx;
+  z-index: 100;
+  top: 500rpx;
+  left: 55%;
+  margin-left: -315rpx;
+  font-size: 30rpx;
+}
+
+/* 使用和编辑之间切换 */
+
+.show_up {
+  animation: show_up linear 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.preview {
+  height: 0;
+}
+
+@keyframes show_up {
+  0% {
+    height: 0rpx;
+  }
+
+  100% {
+    height: 100rpx;
+  }
+}
+/* 录音动画 -G*/
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.rr1,.rr2{
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  border: 2rpx #ec6096 solid;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx #ec6096;
+  box-sizing: border-box;
+  transform: scale(1);
+}
+.yy .record .img .running_roll{
+  animation: recording 1.5s linear ;
+  animation-iteration-count: infinite
+}
+.yy .record .img .running_roll.rr1{-webkit-animation-delay:0; }
+.yy .record .img .running_roll.rr2{ -webkit-animation-delay:0.75s; }
+@keyframes recording{
+  0% {transform:scale(1);opacty: 0}
+  50% {transform: scale(1.25);opacity: 0.5}
+  99% {transform: scale(1.5);opacity: 0}
+  100% {transform:scale(1);opacity: 0}
+}
+

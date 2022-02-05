@@ -1,0 +1,47 @@
+<!-- pages/one_card_reply/one_card_reply.wxml-->
+<view class='situation'>{{reply_num}}人回复 共{{come_num}}人赴宴</view>
+<view class="content">
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{logs}}" wx:key="no">
+    <view class='reply' bindtouchstart="touchstart" bindtouchmove="touchmove">
+      <view class='time'>{{item.reply_time}}</view>
+      <view class='name'>赴宴人姓名：<text>{{item.reply_name}}</text></view>
+      <view class='num'>赴宴人数：<text>{{item.attend_num}}人</text></view>
+      <view class='bar'></view>
+      <view class='re_text'>{{item.reply_content}}</view>
+    </view>
+     <view class="del" catchtap="del" data-index="{{index}}" data-replyid="{{item.reply_id}}">删除</view>
+  </view>
+
+</view>
+
+
+
+<!-- <view class='situation'>{{reply_num}}人回复 共{{come_num}}人赴宴</view>
+<block wx:for='{{replys}}' wx:for-item="value">
+  <view class='reply inner txt' bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <view class='time'>{{value.name}}</view>
+    <view class='name'>赴宴人姓名：<text>{{value.name}}</text></view>
+    <view class='num'>赴宴人数：<text>{{value.num}}人</text></view>
+    <view class='bar'></view>
+    <view class='re_text'>{{value.time}}</view>
+    <view data-index="{{index}}" bindtap = "delItem" class="inner del">删除</view>
+  </view>
+</block> -->
+
+
+<!-- <view class='situation'>{{reply_num}}人回复 共{{come_num}}人赴宴</view>
+<view class="item-box">
+  <view class="items">
+    <view wx:for='{{logs}}' wx:for-item="value" class="item">
+     
+      <view class='reply inner txt' bindtouchstart="touchstart" bindtouchmove="touchmove">
+	    <view class='time'>{{value.reply_time}}</view>
+	    <view class='name'>赴宴人姓名：<text>{{value.reply_name}}</text></view>
+	    <view class='num'>赴宴人数：<text>{{value.attend_num}}人</text></view>
+	    <view class='bar'></view>
+	    <view class='re_text'>{{value.reply_content}}</view>
+	  </view>
+      <view data-index="{{index}}" bindtap = "delItem" class="inner del">删除</view>
+    </view>
+  </view>
+</view> 

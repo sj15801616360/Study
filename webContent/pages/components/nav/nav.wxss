@@ -1,0 +1,16 @@
+/* pages/components/nav/nav.wxss */
+.nav {
+  z-index: 99;
+  position: fixed;
+  width: 319rpx;
+  height: 84rpx;
+  border-radius: 30px;
+   background: #eb6298; 
+  text-align: center;
+  line-height: 84rpx;
+  color: #fff;
+  left: 50%;
+  margin-left: -160rpx;
+  bottom: 50rpx;
+   box-shadow: 0px 3px 10px #cc8ea7; 
+}

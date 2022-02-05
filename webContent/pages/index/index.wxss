@@ -1,0 +1,148 @@
+page{
+  overflow: hidden
+}
+.banner{
+  height: 230rpx;
+  width: 690rpx;
+  margin:0 auto;
+  border-radius: 8rpx;
+  background-size: cover;
+  padding-left:48rpx;
+  padding-top: 42rpx;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0px 10px 15px #888888;
+}
+.banner_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 230rpx;
+  width: 690rpx;
+  z-index: -1
+}
+.e_title,.c_title,.s_title{
+color: white
+}
+.e_title{
+  font-size: 20rpx;
+  font-weight: lighter;
+  line-height:20rpx
+}
+.c_title{
+  font-size: 44rpx;
+  line-height: 44rpx;
+  margin: 20rpx 0 28rpx 0
+}
+.s_title{
+  font-size: 24rpx;
+  font-weight: lighter;
+  line-height: 24rpx
+}
+.banners{
+  height: 279rpx;
+  margin-top: 20rpx;
+}
+
+.nav{
+  height: 230rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  margin-bottom: 44rpx;
+  border-radius: 10rpx;
+  position: relative;
+  box-sizing: border-box;
+  padding-top:67rpx;
+  padding-left: 48rpx
+}
+.nav image{
+width: 100%;
+z-index: -1;
+top: 0;
+left: 0
+}
+.nav_img2{
+height: 297rpx;
+position: absolute;
+top: -11rpx
+}
+.nav_img3{
+height: 318rpx;
+position: absolute;
+top: -14rpx
+}
+.nav_img1{
+height: 298rpx;
+position: absolute;
+top: -10rpx
+}
+.c_card{
+  font-size: 52rpx;
+  color: #fff;
+  font-weight: lighter;
+}
+.e_card{
+  font-size: 32rpx;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: lighter;
+}
+.tabbar{
+  width: 750rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: -92rpx
+}
+
+
+.btn-area{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff; 
+}
+.btn-area view{
+  width: 32%;
+  float: left;
+  text-align: center;
+  font-size: 24rpx;
+  height: 90rpx;
+  padding-left: 14%;
+}
+/*.active1{
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar03.png') no-repeat 45% 20rpx;
+  color: #e996b6;
+}
+.active2{
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar04.png') no-repeat 20% 20rpx;
+  color: #e996b6;
+}*/
+.btn-area .img1{
+  /*width: 100%;
+  height: 90rpx;*/
+  display: block;
+  margin: 0 auto;
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar01.png') no-repeat 45% 20rpx;
+  background-size: 44rpx 50rpx;
+  line-height: 95rpx;
+  color: #e996b6;
+}
+.btn-area .img2{
+  /*width: 100%;
+  height: 90rpx;*/
+  display: block;
+  margin: 0 auto;
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar02.png') no-repeat 45% 20rpx;
+  background-size: 44rpx 50rpx;
+  line-height: 95rpx;
+  color: #ccbdcf;
+}
+/* 拒绝后的遮罩层 */
+.shutter{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background: red; */
+  top: 0
+}

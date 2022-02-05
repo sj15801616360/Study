@@ -1,0 +1,36 @@
+<swiper indicator-dots='true' class='banners' indicator-active-color='rgb(255,255,255)' indicator-color='rgba(255,255,255,0.3)' circular='true' autoplay='true' interval='5000'>
+  <block wx:for='{{banner}}' wx:key='this'>
+    <swiper-item class=''>
+      <view class='banner' data-type='{{item.banner_card_type}}' data-cardid='{{item.banner_card_id}}' bindtap='b_jump'>
+        <image src='{{item.banner_image}}' class='banner_img'></image>
+        <view class='e_title'>{{item.e_title}}</view>
+        <view class='c_title'>{{item.c_title}}</view>
+        <view class='s_title'>{{item.s_title}}</view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='navs'>
+  <navigator class='nav' url='{{blessing_url}}'>
+    <image class='nav_img1' src='http://www.xingyunxingqiu.com/resources/images/nav1.png'></image>
+    <view class='c_card'>祝福卡</view>
+    <view class='e_card'>BLESSING CARD</view>
+  </navigator>
+  <navigator class='nav' url='{{birthday_url}}'>
+    <image class='nav_img2' src='http://www.xingyunxingqiu.com/resources/images/nav2.png'></image>
+     <view class='c_card'>生日卡</view>
+    <view class='e_card'>BLESS CARD</view>
+  </navigator>
+  <navigator class='nav' url='{{invitation_url}}'>
+    <image src='http://www.xingyunxingqiu.com/resources/images/nav3.png' class='nav_img3'></image>
+     <view class='c_card'>邀请函</view>
+    <view class='e_card'>INVITATION CARD</view>
+  </navigator>
+</view>
+<view class="btn-area">
+  <view class="img1" bindtap="toasta">贺卡</view>
+  <view class="img2" bindtap="toastb">我的</view>
+</view>
+<view class='shutter' bindtap='relogin' wx:if='{{canIUse==0}}'>
+
+</view>

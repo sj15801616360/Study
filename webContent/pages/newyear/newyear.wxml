@@ -1,0 +1,192 @@
+<!--pages/christmas02/christmas02_index/christmas02_index.wxml-->
+<import src="../../template/qr_code.wxml"/>
+<view class="mcontent" style='display:{{musicshow==1?"block":"none"}}'>
+  <view wx:for="{{list}}" wx:for-index="idx" data-idx="{{idx}}" wx:key="this" class="list" catchtap='check'>
+    <image wx:if="{{item.check}}" src='{{imgurl}}radio_check.png' class="radiocheck"></image>
+    <image wx:else src='{{imgurl}}radio.png' class="radiocheck"></image>
+    <view class="nameandTime">
+      <view class="name">{{item.music_name}}</view>
+      <view class="time">时长:{{item.music_duration}}</view>
+    </view>
+    <!-- <view class="source">
+      来源:{{item.music_source}}
+    </view> -->
+  </view>
+  <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='goback'>确定</view>
+</view>
+
+
+<view bindtouchend="touchEnd" bindtouchstart="touchStart" class="container" style='display:{{indexshow==1?"block":"none"}}'>
+  <!-- <view animation="{{animationData}}" style='display:{{hide1==1?"block":"none"}}'>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 10%;top: -170rpx;animation-delay:0.6s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 50%;top: -170rpx;animation-delay:0.8s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 80%;top: -170rpx;animation-delay:0s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 15%;top: -170rpx;animation-delay:3.2s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 15%;top: -170rpx;animation-delay:3.6s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 80%;top: -170rpx;animation-delay:3.7s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 10%;top: -170rpx;animation-delay:5.1s;'></image>
+
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 20%;top: -170rpx;animation-delay:5.4s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 50%;top: -170rpx;animation-delay:5.6s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 70%;top: -170rpx;animation-delay:7.1s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 20%;top: -170rpx;animation-delay:7.3s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 45%;top: -170rpx;animation-delay:7.9s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 75%;top: -170rpx;animation-delay:9.3s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 17%;top: -170rpx;animation-delay:9.6s;'></image>
+
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 47%;top: -170rpx;animation-delay:10s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 88%;top: -170rpx;animation-delay:12.3s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 25%;top: -170rpx;animation-delay:12.7s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 78%;top: -170rpx;animation-delay:12.9s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 17%;top: -170rpx;animation-delay:14.4s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 38%;top: -170rpx;animation-delay:14.5s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 76%;top: -170rpx;animation-delay:14.9s;'></image>
+
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 20%;top: -170rpx;animation-delay:16.1s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 35%;top: -170rpx;animation-delay:16.3s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 67%;top: -170rpx;animation-delay:16.4s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 10%;top: -170rpx;animation-delay:17.8s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 90%;top: -170rpx;animation-delay:17.9s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 56%;top: -170rpx;animation-delay:18s;'></image>
+      <image src='https://www.xingyunxingqiu.cn/resources/images/fuz_001.png' class="imagea001 piaoOutDown"
+      style='left: 35%;top: -170rpx;animation-delay:17.4s;'></image>
+    </view> -->
+  <!-- 第一屏 -->
+  <view class="one {{ view[0].in }} {{ view[0].out }} {{ view[0].ui }}" style="width: 100%; height: 100%">
+    <!-- <view class="new_one_one zoomIn animated delay2">恭贺新春</view> -->
+    <image class='new_one_one zoomIn animated delay2' src="../images/newyear110.png"></image>
+    <!-- <form bindsubmit="formSubmit" >
+          <textarea type='text' style='display:{{hide1==1?"none":"block"}}' data-page='header' class="new_one_one bac-gray" placeholder="恭贺新春" bindinput='header' maxlength='4' confirm-type="done" focus="{{focus}}"></textarea>
+    </form> -->
+    <view class="new_one_two zoomIn animated delay2">2018好运连连</view>
+    <image class='new_one_three fadeInDown animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/newyear011.png'></image>
+    <image class='new_one_three2 zoomIn animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear012.png'></image>
+    <image class='new_one_three3 fadeInRight animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/newyear013.png'></image>
+    <image class='new_one_three4 fadeInLeft animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear013.png'></image>
+    <image class='new_one_three5 fadeInLeft animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear014.png'></image>
+    <image class='new_one_three6 zoomIn animated delay3' src='https://www.xingyunxingqiu.cn/resources/images/newyear015.png'></image>
+    <image class='new_one_three7 fadeInRight animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear014.png'></image>
+    <image class='new_one_three8 zoomIn animated delay3' src='https://www.xingyunxingqiu.cn/resources/images/newyear017.png'></image>
+
+    <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+  </view>
+  <!-- 第二屏 -->
+  <view class="two {{ view[1].in }} {{ view[1].out }} {{ view[1].ui }}" style="width: 100%; height: 100%" bindtouchstart='pullStart' bindtouchmove='pullMove' bindtouchend='pullEnd'>
+    <!-- <view class="new_one_one zoomIn animated delay2">恭贺新春</view> -->
+    <image class='new_one_one zoomIn animated delay2' src="../images/newyear110.png"></image>
+    <text class="new_two_one zoomIn animated delay3" style='display:{{hide1==1?"block":"none"}}'>{{content}}</text>
+    <image class='new_one_three fadeInDown animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/newyear011.png'></image>
+    <image class='new_one_three2 zoomIn animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear012.png'></image>
+    <image class='new_one_three3 fadeInRight animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/newyear013.png'></image>
+    <image class='new_one_three4 fadeInLeft animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear013.png'></image>
+    <image class='new_one_three5 fadeInLeft animated delay' src='https://www.xingyunxingqiu.cn/resources/images/newyear014.png'></image>
+    <image class='new_one_three9 fadeInRight animated delay3' src='https://www.xingyunxingqiu.cn/resources/images/newyear025.png'></image>
+
+    <view style='display:{{hide1==1?"none":"block"}}'>
+      <view class="new_two_one bac-gray" style='display:{{yy==1?"block":"none"}}' catchtap="dianji">{{content}}</view>
+      <form bindsubmit="formSubmit">
+          <textarea type='text' style='display:{{wz==1?"none":"block"}}' class="new_two_one bac-gray" placeholder="吉祥的邮包， 将好运抽取，吉星高照； 将快乐释放，开心无限; 将喜气蔓延，心花怒放； 将健康赐予，福寿无边； 将祝福呈上，锦上添话；祝新年开怀，万事如意！" bindinput='content' confirm-type="done" focus="{{focus}}" maxlength='85'></textarea>
+      </form>
+    </view>
+
+    <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    <!-- <view class='dear' style='display:{{hide1==1?"block":"none"}}'>{{header}}</view>
+    <text class='text' style='display:{{hide1==1?"block":"none"}}'>{{content}}</text> -->
+
+    <!-- <view style='display:{{hide1==1?"none":"block"}}'>
+      <view class='dear bac-gray' style='display:{{yy==1?"block":"none"}}' catchtap="dianji">{{header}}</view>
+      <text class='text bac-gray' style='display:{{yy==1?"block":"none"}}' catchtap="dianji">{{content}}</text>
+
+      <input type='text' style='display:{{wz==1?"none":"block"}}' class="toptext" placeholder="亲爱的：" bindinput='header'></input>
+      <textarea style='display:{{wz==1?"none":"block"}}' placeholder="今天是圣诞节，圣诞老公公今天很忙， 特地要我代替他老人家来完成你的心愿你走到窗前，闭上眼对着天空数到三，愿望就能实现，圣诞节快乐!" bindinput='content'></textarea>
+    </view> -->
+
+    <!-- 播放 -->
+    <!-- <view wx:if="{{recordshow==1}}" class="wx recordshow" bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}</view>
+    <view wx:else class="wx" style='display:{{ccc==1?"none":"block"}}' bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}</view>
+    <view class="amend zoomIn animated delay" style='display:{{ccc==1?"none":"block"}}' catchtap='amend'>修改</view> -->
+
+    <!-- 播放 -->
+  <view wx:if="{{recordshow==1}}" class="wx recordshow" bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}
+     <image src='../images/playso{{r_play}}.png'></image>
+  </view>
+  <view wx:else class="wx" style='display:{{ccc==1?"none":"block"}}' bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}
+      <image src='../images/playso{{r_play}}.png'></image>
+  </view>
+  <view class="amend" style='display:{{ccc==1?"none":"block"}}' catchtap='amend'>修改</view>
+
+    
+  </view>
+  <image src='https://www.xingyunxingqiu.cn/resources/images/music.png' class='music {{play==1?"note_roll":""}}' style='display:{{hide1==1?"block":"none"}}' bindtap='audioPlay'></image>
+  <button wx:if="{{enter==0}}" class="btn" open-type="{{share}}" style='display:{{hide1==1?"block":"none"}}' bindtap='user_hide'>{{send}}</button>
+  <!-- 编辑音乐 -->
+  <view class='selectmu' style='display:{{hide1==0?"block":"none"}}' catchtap='tapmusic'>换音乐</view>
+  <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='send'>预览</view>
+  <!-- 录音播放弹框 -->
+  <view class="yy" style='display:{{cc==1?"none":"block"}}'>
+    <view class="play">
+      <view class="img1" bindtap="gotoPlay" data-key="{{savedFilePath}}">
+               <image src="../images/playso{{r_play}}.png"></image>
+      </view>
+    </view>
+    <view class="record">
+      <view class="x" catchtap='close'><image src='../images/guan02.png'></image></view>
+      <view class="za">按住说话送祝福</view>
+      <view class="zb">{{record}}</view>
+      <view class="img" bindtouchstart="touchdown" bindtouchend="touchup">
+          <view class='rr1 {{recording==1?"running_roll":""}}'></view> 
+          <view class='rr2 {{recording==1?"running_roll":""}}'></view>  
+        <image src="https://www.xingyunxingqiu.cn/resources/images/recordo1.png"></image>
+      </view>
+    </view>
+  </view>
+ <template is='qr_code' data='{{...qr_code}}'>
+
+</template>
+</view>
+<!-- 开场动画-->
+<view class='openanimation {{openanimation}}' style='display:{{indexshow==0?"block":"none"}}'>
+    <image src="../images/openstart.jpg" class="op-animation-bj"></image>
+    <view>
+      <image src="../images/openButton.png" class="openButton {{openButton}}" bindtap="buttonClick"></image>
+      <image src="../images/envelope.png" class="envelope"></image>
+      <image src="../images/envelopeUp.png" class="envelopeUp {{envelopeUp}}"></image>
+      <view class="jc {{z100}}">
+        <view class="jf {{jf}}">
+          <image src="../images/xinhekaxic.png" class="envelopeContent"></image>
+        </view>
+      </view>
+      
+    </view>   
+</view>

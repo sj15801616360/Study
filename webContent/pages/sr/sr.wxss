@@ -1,0 +1,272 @@
+@import '../ddemo/ddemo.wxss';
+
+.one{
+	width: 100%;
+	height: 100%;
+	background: url('https://www.xingyunxingqiu.cn/resources/images/sr_017.png') no-repeat center center;
+}
+.sr_one_one{
+	width: 100%;
+	height: 270rpx;
+}
+.sr_one_two{
+	width: 657rpx;
+	height: 420rpx;
+	position: absolute;
+	top: 248rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+}
+.sr_one_three{
+	width: 467rpx;
+	height: 170rpx;
+	position: absolute;
+	top: 290rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 3;
+}
+.sr_one_five{
+	width: 528rpx;
+	height: 89rpx;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 490rpx;
+	margin: auto;
+	z-index: 3;
+}
+.sr_one_finu{
+	width: 417rpx;
+	height: 505rpx;
+	position: absolute;
+	left: 5%;
+	bottom: 0;
+}
+.sr_one_lian{
+	width: 326rpx;
+	height: 531rpx;
+	position: absolute;
+	right: 5%;
+	bottom: 63rpx;
+	z-index: 5;
+}
+.two{
+	width: 100%;
+	height: 100%;
+	background: url('https://www.xingyunxingqiu.cn/resources/images/sr_017.png') no-repeat center center;
+}
+.sr_two_one{
+	width: 636rpx;
+	height: 862rpx;
+	position: absolute;
+	bottom: 97rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.sr_two_two{
+	width: 392rpx;
+	height: 83rpx;
+	position: absolute;
+	bottom: 263rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 3;
+}
+.sr_two_three{
+	width: 703rpx;
+	height: 373rpx;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.sr_two_five{
+	width: 465rpx;
+	height: 160rpx;
+	line-height: 40rpx;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 659rpx;
+	margin: auto;
+	color: #3a165c;
+	font-size: 30rpx;
+	text-indent:2em;
+}
+
+
+.delay{
+  animation-delay:1s;
+}
+.delay2{
+  animation-delay:2s;
+}
+.delay3{
+  animation-delay:3s;
+}
+.delay4{
+  animation-delay:4s;
+}
+.delay5{
+  animation-delay:5s;
+}
+.delay6{
+  animation-delay:6s;
+}
+.shownone{
+	height: 0rpx;
+}
+.bac-gray{
+  background:#cccccc;
+}
+
+.yy{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.5);
+  z-index: 199;
+}
+.yy .record{
+   background: #fff;
+   width: 100%;
+   height: 530rpx;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   z-index: 299;
+}
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.yy .record .za{
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 100rpx;
+}
+.yy .record .zb{
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.yy .x{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  color: #000000;
+  width: 47rpx;
+  height: 47rpx;
+}
+.yy .x image{
+  width: 100%;
+  height: 100%;
+}
+.yy .play{
+  margin:450rpx auto 0 auto;
+  width: 256rpx;
+  height: 70rpx;
+}
+.yy .play .img1{
+  width: 100%;
+  height: 100%;
+}
+.yy .play .img1 image{
+  width: 100%;
+  height: 100%;
+}
+.amend{
+  width: 80rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  color: #000;
+  position: absolute;
+  top: 57.5%;
+  right: 120rpx;
+  z-index: 99;
+}
+/*录音播放弹框*/
+.wx{
+  position: absolute;
+  top: 56%;
+  width: 300rpx;
+  height: 82rpx;
+  display: block;
+  left: 28%;
+  /*background: url('https://www.xingyunxingqiu.cn/resources/images/playso.png') no-repeat center;
+  background-size: 100% 100%;*/
+  z-index: 99;
+  /*text-align: left;*/
+  /*padding-left: 50rpx;*/
+  text-indent: 120rpx;
+  line-height: 82rpx;
+  color: #dddddd;
+}
+/*-G图片添加新样式*/
+.wx image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
+
+/* 录音动画 -G*/
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.rr1,.rr2{
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  border: 2rpx #ec6096 solid;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx #ec6096;
+  box-sizing: border-box;
+  transform: scale(1);
+}
+.yy .record .img .running_roll{
+  animation: recording 1.5s linear ;
+  animation-iteration-count: infinite
+}
+.yy .record .img .running_roll.rr1{-webkit-animation-delay:0; }
+.yy .record .img .running_roll.rr2{ -webkit-animation-delay:0.75s; }
+@keyframes recording{
+  0% {transform:scale(1);opacty: 0}
+  50% {transform: scale(1.25);opacity: 0.5}
+  99% {transform: scale(1.5);opacity: 0}
+  100% {transform:scale(1);opacity: 0}
+}

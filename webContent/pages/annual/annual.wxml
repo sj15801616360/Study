@@ -1,0 +1,454 @@
+  <view class="mcontent" style='display:{{musicshow==1?"block":"none"}}'>
+    <view wx:for="{{list}}" wx:for-index="idx" data-idx="{{idx}}" wx:key="this" class="list" catchtap='check'>
+      <image wx:if="{{item.check}}" src='{{imgurl}}radio_check.png' class="radiocheck"></image>
+      <image wx:else src='{{imgurl}}radio.png' class="radiocheck"></image>
+      <view class="nameandTime">
+        <view class="name">{{item.music_name}}</view>
+        <view class="time">时长:{{item.music_duration}}</view>
+      </view>
+    </view>
+    <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='goback'>确定</view>
+  </view>
+
+
+  
+  <view bindtouchend="touchEnd" bindtouchstart="touchStart" class="container" style='display:{{indexshow==1?"block":"none"}}'>
+    <!--one-->
+    <view class="one {{ view[0].in }} {{ view[0].out }} {{ view[0].ui }}" style="width: 100%; height: 100%">
+      <view class="one-one">
+        <view class='p1 p001 fadeInDown animated02 delay105' style='display:{{hide1==1?"block":"none"}}'>{{p1title}}</view>
+        <form bindsubmit="formSubmit" >
+          <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p1title' class="p1 bac-gray" placeholder="2018年度XXX公司年度大会" bindinput='title1' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+        </form>
+        <image class='img1 zoomIn animated02' src='https://www.xingyunxingqiu.cn/resources/images/annual01.png'></image>
+        <image class='img2 fadeInRight animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual02.png'></image>
+        <image class='img3 animated02 delay fadeInLeft' src='https://www.xingyunxingqiu.cn/resources/images/annual03.png'></image>
+        <view class='a1 ma fadeInUpBig animated02 delay'>{{dates}} {{times}}</view>
+        <view class='a1 fadeInUpBig animated02 delay'>{{address}}</view>
+      </view>
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--two-->
+    <view class="two {{ view[1].in }} {{ view[1].out }} {{ view[1].ui }}" style="width: 100%; height: 100%">
+      
+      <view class="two-zero">
+        <view class='two-one'>
+          <view class="two01 fadeInUp animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{p2title}}</view>
+          <form bindsubmit="formSubmit" >
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p2title' class="two01 bac-gray" placeholder="诚挚邀请" bindinput='title2' maxlength='8' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+
+          <image class='img1 fadeInUp animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/annual08.png'></image>
+
+          <view class="two02 rollIn animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{p3content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p3content' class="two02 bac-gray" placeholder="尊敬的员工：" bindinput='p3content' maxlength='10' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+
+          <text class="two03 two031 rollIn animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{p4content}}</text>
+          <form bindsubmit="formSubmit">
+            <textarea type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p4content' class="two03 two031 bac-gray" placeholder="大家好，为了感谢大家一直以来的努力工作和支持。本司将于2018年1月15日于XXX酒店举行“你我牵手，并肩同行”年终答谢晚会。在此我代表公司员工诚邀大家参加答谢晚会，感谢大家一年以来的支持：" bindinput='p4content' confirm-type="done" focus="{{focus}}"></textarea>
+          </form>
+
+          <view class="two03 text-r rollIn animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{p5content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p5content' class="two03 text-r bac-gray" placeholder="北京XXXXXXX有限公司" bindinput='p5content' maxlength='15' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+
+          <view class="two03 text-r rollIn animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{schedule}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='digit' style='display:{{hide1==1?"none":"block"}}' data-page='schedule' class="two03 text-r bac-gray" placeholder="2016.11.08" bindinput='schedule' confirm-type="done" maxlength='11' focus="{{focus}}"></input>
+          </form>
+
+        </view>
+      </view>
+      <image class='img1 fadeInDown animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual04.png'></image>
+      <image class='img2 fadeInRight animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual05.png'></image>
+      <image class='img3 fadeInUp animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual06.png'></image>
+      <image class='img4 fadeInLeft animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual07.png'></image>
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--three-->
+    <view class="three {{ view[2].in }} {{ view[2].out }} {{ view[2].ui }}" style="width: 100%; height: 100%">
+      
+      <image class='img1 fadeInDown animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual09.png'></image>
+      <image class='img2 fadeInUp animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual10.png'></image>
+      <view class="one">
+        <view class="one-two">
+          <view class="twxt01 fadeInDown animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{headlinea}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='headlinea' class="twxt01 text-r bac-gray" placeholder="特邀嘉宾" bindinput='headlinea' maxlength='8' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+          
+          <!--控制按键  -G-->
+          <view class='adjust adjust_aa' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_a' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_a' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_a' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+          <view class='img01 zoomInLeft animated03 delay2'>
+            <view class="pic_box_a1" style='transform:scale({{size_x_a}},{{size_y_a}});'>
+              <image src='{{p1==""?"https://www.xingyunxingqiu.cn/resources/images/annual11.png":p1[0]}}' class='img100' style='top: {{top_a}}rpx;left:{{left_a}}rpx' mode='widthFix'></image>
+            </view>
+          </view>
+          <!-- <image src='{{p1==""?"https://www.xingyunxingqiu.cn/resources/images/annual11.png":p1[0]}}' class="img01 zoomInLeft animated03 delay2"></image> -->
+
+
+          <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto001" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p1'></image>
+          <view class="p6bian p6biana zoomInRight animated03 delay2" style='display:{{hide1==1?"block":"none"}}'>{{p6content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p6content' class="p6bian p6biana text-r bac-gray" placeholder="董事长" bindinput='p6content' confirm-type="done" focus="{{focus}}" maxlength='7'></input>
+          </form>
+          <view class="p7bian p7biana zoomInRight animated03 delay2" style='display:{{hide1==1?"block":"none"}}'>{{p7content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p7content' class="p7bian p7biana text-r bac-gray" placeholder="王云" bindinput='p7content' maxlength='4' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+
+          <!--控制按键  -G-->
+          <view class='adjust adjust_bb' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_b' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_b' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_b' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+          <view class='img02 min zoomInRight animated03 delay3'>
+            <view class="pic_box_a1" style='transform:scale({{size_x_b}},{{size_y_b}});'>
+              <image src='{{p2==""?"https://www.xingyunxingqiu.cn/resources/images/annual11.png":p2[0]}}' class='img100' style='top: {{top_b}}rpx;left:{{left_b}}rpx' mode='widthFix'></image>
+            </view>
+          </view>
+          <!-- <image class='img02 min zoomInRight animated03 delay3' src='{{p2==""?"https://www.xingyunxingqiu.cn/resources/images/annual11.png":p2[0]}}'></image> -->
+
+          <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto002" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p2'></image>
+          <view class="p6bian p6bianb zoomInLeft animated03 delay3" style='display:{{hide1==1?"block":"none"}}'>{{p8content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p8content' class="p6bian p6bianb text-r bac-gray" placeholder="董事长" bindinput='p8content' confirm-type="done" focus="{{focus}}" maxlength='7'></input>
+          </form>
+          <view class="p7bian p7bianb zoomInLeft animated03 delay3" style='display:{{hide1==1?"block":"none"}}'>{{p9content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p9content' class="p7bian p7bianb text-r bac-gray" placeholder="李雨信" bindinput='p9content' maxlength='4' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+
+          <!--控制按键  -G-->
+          <view class='adjust adjust_cc' wx:if="{{hide1==0}}">
+            <view bindtap='enlarge_c' class="adjust_a adjust_d adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0015.png'></image>
+            </view>
+            <view bindtap='narrow_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0016.png'></image>
+            </view>
+            <view bindtap='m_up_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0013.png'></image>
+            </view>
+            <view bindtap='m_down_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0014.png'></image>
+            </view>
+            <view bindtap='m_left_c' class="adjust_a adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0011.png'></image>
+            </view>
+            <view bindtap='m_right_c' class="adjust_a adjust_c adjust_b">
+              <image class="adjust_a" src='https://www.xingyunxingqiu.cn/resources/images/pbian_0012.png'></image>
+            </view>
+          </view>
+          <view class='img01 min zoomInLeft animated03 delay4'>
+            <view class="pic_box_a1" style='transform:scale({{size_x_c}},{{size_y_c}});'>
+              <image src='{{p3==""?"https://www.xingyunxingqiu.cn/resources/images/annual11.png":p3[0]}}' class='img100' style='top: {{top_c}}rpx;left:{{left_c}}rpx' mode='widthFix'></image>
+            </view>
+          </view>
+          <!-- <image class='img01 min zoomInLeft animated03 delay4' src='{{p3==""?"https://www.xingyunxingqiu.cn/resources/images/annual11.png":p3[0]}}'></image> -->
+          <image src='{{imgurl}}cameraphoto.png' class="cameraphoto cameraphoto003" style='display:{{hide1==1?"none":"block"}}' catchtap='seletphoto' data-camera='p3'></image>
+          <view class="p6bian p6bianc p6biana zoomInRight animated03 delay4" style='display:{{hide1==1?"block":"none"}}'>{{p10content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p10content' class="p6bian p6bianc text-r bac-gray" placeholder="董事长" bindinput='p10content' confirm-type="done" focus="{{focus}}" maxlength='7'></input>
+          </form>
+          <view class="p7bian p7bianc p6biana zoomInRight animated03 delay4" style='display:{{hide1==1?"block":"none"}}'>{{p11content}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='p11content' class="p7bian p7bianc text-r bac-gray" placeholder="杨佳奇" bindinput='p11content' maxlength='4' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+
+        </view>
+      </view>
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--four-->
+    <view class="four {{ view[3].in }} {{ view[3].out }} {{ view[3].ui }}" style="width: 100%; height: 100%">
+      
+      <view class="two-zero">
+        <view class='two-one'>
+          <view class="four-one fadeInUp animated delay2" style='display:{{hide1==1?"block":"none"}}'>{{headlineb}}</view>
+          <form bindsubmit="formSubmit">
+            <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='headlineb' class="four-one bac-gray" value="晚会流程" bindinput='headlineb' maxlength='8' confirm-type="done" focus="{{focus}}"></input>
+          </form>
+          <image class='img001 fadeInUp animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/annual08.png'></image>
+
+          <view class="four_two0 fadeInLeft animated delay205">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtime}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtime' class="four_two1 bac-gray" value="{{fourtime}}" bindinput='fourtime' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontent}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontent' class="four_two2 bac-gray" value="{{fourcontent}}" bindinput='fourcontent' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+          <view class="four_two fadeInLeft animated delay3">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtimea}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtimea' class="four_two1 bac-gray" value="{{fourtimea}}" bindinput='fourtimea' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontenta}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontenta' class="four_two2 bac-gray" value="{{fourcontenta}}" bindinput='fourcontenta' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+          <view class="four_two fadeInLeft animated delay305">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtimeb}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtimeb' class="four_two1 bac-gray" value="{{fourtimeb}}" bindinput='fourtimeb' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontentb}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontentb' class="four_two2 bac-gray" value="{{fourcontentb}}" bindinput='fourcontentb' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+          <view class="four_two fadeInLeft animated delay4">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtimec}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtimec' class="four_two1 bac-gray" value="{{fourtimec}}" bindinput='fourtimec' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontentc}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontentc' class="four_two2 bac-gray" value="{{fourcontentc}}" bindinput='fourcontentc' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+          <view class="four_two fadeInLeft animated delay405">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtimed}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtimed' class="four_two1 bac-gray" value="{{fourtimed}}" bindinput='fourtimed' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontentd}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontentd' class="four_two2 bac-gray" value="{{fourcontentd}}" bindinput='fourcontentd' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+          <view class="four_two fadeInLeft animated delay5">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtimee}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtimee' class="four_two1 bac-gray" value="{{fourtimee}}" bindinput='fourtimee' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontente}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontente' class="four_two2 bac-gray" value="{{fourcontente}}" bindinput='fourcontente' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+          <view class="four_two fadeInLeft animated delay505">
+              <view class="four_two1" style='display:{{hide1==1?"block":"none"}}'>{{fourtimef}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourtimef' class="four_two1 bac-gray" value="{{fourtimef}}" bindinput='fourtimef' maxlength='12' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+              <view class="four_two2" style='display:{{hide1==1?"block":"none"}}'>{{fourcontentf}}</view>
+              <form bindsubmit="formSubmit">
+                <input type='text' style='display:{{hide1==1?"none":"block"}}' data-page='fourcontentf' class="four_two2 bac-gray" value="{{fourcontentf}}" bindinput='fourcontentf' maxlength='6' confirm-type="done" focus="{{focus}}"></input>
+              </form>
+          </view>
+        </view>
+      </view>
+      <image class='img1 fadeInDown animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual04.png'></image>
+      <image class='img2 fadeInRight animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual05.png'></image>
+      <image class='img3 fadeInUp animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual06.png'></image>
+      <image class='img4 fadeInLeft animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual07.png'></image>
+      <view class='up1'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+      </view>
+    </view>
+    <!--five-->
+    <view class="five {{ view[4].in }} {{ view[4].out }} {{ view[4].ui }}" style="width: 100%; height: 100%" bindtouchstart='pullStart' bindtouchmove='pullMove' bindtouchend='pullEnd'>
+      <view class="two-zero">
+        <view class='two-one'>
+          <view class="five-one fadeInUp animated delay2">{{p1title}}</view>
+          <image class='img001 fadeInUp animated delay2' src='https://www.xingyunxingqiu.cn/resources/images/annual08.png'></image>
+          <view class='date_time zoomIn animated02 box delay2'>
+            <!-- <picker wx:if='{{hide1==0}}' class='date bac-gray' mode='date' value='2017-01-01' bindchange='changeDate'>
+                  <view>
+                    <view bindinput='year' class='borderii'>{{year}}</view>年<view bindinput='month' class='borderii'>{{month}}</view>月<view bindinput='day' class='borderii'>{{day}}</view> 号
+                  </view>
+            </picker>
+            <view wx:else>
+                  <view>
+                    <view bindinput='year' class='borderii'>{{year}}</view>年<view bindinput='month' class='borderii'>{{month}}</view>月<view bindinput='day' class='borderii'>{{day}}</view> 号
+                  </view>
+            </view> -->
+            <picker wx:if='{{hide1==0}}' mode="date" value="{{date}}" start="1978.01.01" end="" bindchange="bindDateChange" class="bac-gray">  
+                <view class="picker">  
+                  {{dates}}  
+                </view>  
+            </picker>  
+            <picker wx:else mode="date" value="{{date}}" start="1978-01-01" end="" bindchange="bindDateChange">  
+                <view class="picker">  
+                  {{dates}}  
+                </view>  
+              </picker>  
+
+            <picker wx:if='{{hide1==0}}' mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange" class="bac-gray" style="margin-left: 12rpx;">  
+                <view class="picker" bindinput='times'>  
+                    {{times}}
+                </view>  
+            </picker>  
+            <picker wx:else>  
+                <view class="picker" bindinput='hour' style="margin-left: 12rpx;">  
+                    {{times}}
+                </view>  
+            </picker>  
+            <view class="clear"></view>
+          </view>
+          <view class="header zoomIn animated02 boa delay2">
+              <view class="location" bindtap='{{hide1==0?"toNearby":""}}' style='background:{{hide1==1?"":"#cccccc"}}'>
+                  <view class="locationName">
+                    <view class="qing page_back1" bindinput='address'>{{address}}</view>
+                  </view>
+              </view>
+          </view>
+
+          <!-- 表单信息 -->
+          <form bindsubmit="formSubmit">
+            <view class='your_reply zoomIn animated02 delay2' style="height: 58%">
+
+              <view class='your_name'>
+                <view class='left_o'>你的名字</view>
+                <view class='name_inputa name_input'>
+                  <input type='text' wx:if='{{enter==1}}' name='realyname' placeholder='填写您的姓名'></input>
+                  <input type='text' wx:else disabled='disabled' placeholder='填写您的姓名'></input>
+                </view>
+              </view>
+              <view class='if'>
+                <view class='left_o'>是否赴宴</view>
+                <view class='if_nota' wx:if='{{enter==1}}'>
+                  <view class='attend {{if_not==1?"if_selected":""}}' data-if-not='1' bindtap='dinner'>赴宴</view>
+                  <view class='regret {{if_not==2?"if_selected":""}}' data-if-not='2' bindtap='dinner'>遗憾</view>
+                </view>
+                <view class='if_nota' wx:else>
+                        <view class='attend'>参加</view>
+                        <view class='regret'>遗憾</view>
+                </view>
+              </view>
+              <view class='num'>
+                    <view class='left_o'>参加人数</view>
+                    <view class='num_changea num_change' wx:if='{{enter==1}}'>
+                      <view class='img01' bindtap='reduce'>
+                        <image class='reduce' src='{{imgurl}}reduce.png'></image>
+                      </view>
+                      <view>{{num}}</view>
+                      <view class='img01' wx:if="{{if_not==2}}">
+                        <image class='add' src='https://www.xingyunxingqiu.cn/resources/images/add.png'></image>
+                      </view>
+                      <view class='img01' wx:else bindtap='plus'>
+                        <image class='add' src='https://www.xingyunxingqiu.cn/resources/images/add.png'></image>
+                      </view>
+                    </view>
+                    <view class='num_changea num_change' wx:else>
+                      <view class='img01'>
+                        <image class='reduce' src='https://www.xingyunxingqiu.cn/resources/images/reduce.png'></image>
+                      </view>
+                      <view>{{num}}</view>
+                      <view class='img01'>
+                        <image class='add' src='https://www.xingyunxingqiu.cn/resources/images/add.png'></image>
+                      </view>
+                    </view>
+                  </view>
+              <view class='reply_blessing'>
+                <view class='left_o'>留言</view>
+                <view class='blessing_inputa blessing_input'>
+                  <input wx:if='{{enter==1}}' placeholder='留下你想说的话' name='message'></input>
+                  <input wx:else placeholder='留下你想说的话' disabled='disabled'></input>
+                </view>
+              </view>
+              <button type="button" wx:if='{{enter==1}}' class='sendleave bac-fse' formType="submit" disabled='{{no_reply}}'>发送回复</button>
+              <button type="button" wx:else class='sendleave bac-gray' disabled='disabled'>发送回复</button>
+            </view>
+          </form>
+
+        </view>
+      </view>
+      <image class='img1 fadeInDown animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual04.png'></image>
+      <image class='img2 fadeInRight animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual05.png'></image>
+      <image class='img3 fadeInUp animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual06.png'></image>
+      <image class='img4 fadeInLeft animated02 delay' src='https://www.xingyunxingqiu.cn/resources/images/annual07.png'></image>
+    
+    <view class='up1' style="z-index: 0">
+        <image src='https://www.xingyunxingqiu.cn/resources/images/up_icon.png'></image>
+    </view>
+    </view>
+    <view class='page6 {{pullUp==1?"pullUp":""}}' style='display:{{showP6==1?"block":"none"}}'>
+    <image src='../../image/close.png' class='close' bindtap='close'></image>
+    <view class='us_info'>
+      <view class='icon'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/qielogo.png'></image>
+        <text>企鹅贺卡</text>
+      </view>
+      <view class='scan'>
+        <image src='../../image/QR_code.jpg' class='QR_code'></image>
+        <view>扫码关注企鹅贺卡</view>
+      </view>
+      <view class='me_too' bindtap='jumpindex'>
+        <text>我也要制作贺卡</text>
+        <image src='../../image/me_too_button.png'></image>
+      </view>
+    </view>
+  </view>
+    <button wx:if="{{enter==0}}" class="btn" open-type="{{share}}" style='display:{{hide1==1?"block":"none"}}' bindtap='user_hide'>{{send}}</button>
+    <image src='https://www.xingyunxingqiu.cn/resources/images/music.png' class='music {{play==1?"note_roll":""}}' style='display:{{hide1==1?"block":"none"}}' bindtap='audioPlay'></image>
+    <!-- 编辑音乐 -->
+    <view class='selectmu' style='display:{{hide1==0?"block":"none"}}' catchtap='tapmusic'>换音乐</view>
+    <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='send'>预览</view>
+  </view>
+<!-- </scroll-view> -->
+
+<!-- 开场动画-->
+<view class='openanimation {{openanimation}}' style='display:{{indexshow==0?"block":"none"}}'>
+    <image src="../images/openstart.jpg" class="op-animation-bj"></image>
+    <view>
+      <image src="../images/openButton.png" class="openButton {{openButton}}" bindtap="buttonClick"></image>
+      <image src="../images/envelope.png" class="envelope"></image>
+      <image src="../images/envelopeUp.png" class="envelopeUp {{envelopeUp}}"></image>
+      <view class="jc {{z100}}">
+        <view class="jf {{jf}}">
+          <image src="https://www.xingyunxingqiu.cn/resources/images/annual_img.png" class="envelopeContent"></image>
+        </view>
+      </view>
+      
+    </view>   
+</view>

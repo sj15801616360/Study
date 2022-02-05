@@ -1,0 +1,48 @@
+/* pages/invitation/invitation.wxss */
+@import'../birthday/birthday.wxss'
+
+
+.btn-area{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff; 
+}
+.btn-area view{
+  width: 32%;
+  float: left;
+  text-align: center;
+  font-size: 24rpx;
+  height: 90rpx;
+  padding-left: 14%;
+}
+/*.active1{
+  
+  color: #e996b6;
+}
+.active2{
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar04.png') no-repeat 20% 20rpx;
+  color: #e996b6;
+}*/
+.btn-area .img1{
+  /*width: 100%;
+  height: 90rpx;*/
+  display: block;
+  margin: 0 auto;
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar01.png') no-repeat 45% 20rpx;
+  background-size: 44rpx 50rpx;
+  line-height: 95rpx;
+  color: #e996b6;
+}
+.btn-area .img2{
+  /*width: 100%;
+  height: 90rpx;*/
+  display: block;
+  margin: 0 auto;
+  background: url('http://www.xingyunxingqiu.com/resources/images/icon-tabbar02.png') no-repeat 45% 20rpx;
+  background-size: 44rpx 50rpx;
+  line-height: 95rpx;
+  color: #ccbdcf;
+}

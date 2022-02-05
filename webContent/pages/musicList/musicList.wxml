@@ -1,0 +1,13 @@
+<!--pages/christmas/musicList/musicList.wxml-->
+<view class="content">
+  <view wx:for="{{list}}" wx:for-index="idx" data-idx="{{idx}}" wx:key="this" class="list" catchtap='check'>
+    <image wx:if="{{item.check}}" src='https://www.xingyunxingqiu.cn/resources/images/radio_check.png' class="radiocheck"></image>
+    <image wx:else src='https://www.xingyunxingqiu.cn/resources/images/radio.png' class="radiocheck"></image>
+    <view class="nameandTime">
+      <view class="name">{{item.name}}</view>
+      <view class="time">时长:{{item.time}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="preview" catchtap='goback'>确定</view>

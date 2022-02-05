@@ -1,0 +1,13 @@
+<!--pages/reply/reply.wxml-->
+<block wx:for='{{logs}}' wx:for-item="value">
+  <view class='card' data-orderid='{{value.order_id}}' bindtap='jump'>
+    <image class='card_img' src='{{value.card_cover}}'></image>
+    <image class='projection' src='../../image/projection.png'></image>
+    <view class='tr'>
+      <text class='title'>{{value.card_name}}</text>
+      <text class='re_num'>{{value.reply_person}}人回复</text>
+    </view>
+    <view class='time'>{{value.add_time}}</view>
+  </view>
+</block>
+<view class='nothing' wx-if='{{nothing==0}}'>暂无回复信息～</view>

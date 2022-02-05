@@ -1,0 +1,96 @@
+/* 二维码 */
+.page6 {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+    z-index:1000;
+   top:100%; 
+   position: absolute
+}
+
+.close {
+  height: 60rpx;
+  width: 60rpx;
+  position: absolute;
+  top: 148rpx;
+  left: 598rpx;
+  z-index: 10000;
+  
+}
+
+.us_info {
+  height: 634rpx;
+  width: 100%;
+  position: absolute;
+  top: 289rpx;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 44rpx;
+  color: #fff;
+  margin-bottom: 46rpx;
+}
+
+.icon image {
+  height: 62rpx;
+  width: 62rpx;
+  margin-right: 20rpx;
+}
+
+.QR_code {
+  height: 280rpx;
+  width: 280rpx;
+  margin-bottom: 28rpx;
+}
+
+.scan {
+  color: #fff;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scan view {
+  line-height: 30rpx;
+}
+
+.me_too {
+  height: 86rpx;
+  width: 450rpx;
+  position: relative;
+  color: #fff;
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 86rpx;
+  margin: 100rpx auto 0;
+}
+
+.me_too image {
+  position: absolute;
+  height: 110rpx;
+  width: 450rpx;
+  left: 0;
+  top: 0;
+}
+
+.me_too text {
+  position: relative;
+  z-index: 62;
+}
+
+.pullUp{
+  animation: pullUp 200ms linear forwards
+}
+@keyframes pullUp {
+  0%{
+   top: 100%;
+  }
+  100%{
+    top: 0%;
+  }
+}

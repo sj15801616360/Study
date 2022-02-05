@@ -1,0 +1,36 @@
+<!--pages/blessing/blessing.wxml-->
+<swiper indicator-dots='true' class='cards cardslist' indicator-active-color='rgb(255,255,255)' indicator-color='rgba(255,255,255,0.3)' circular='false' current='{{card_index}}' duration='{{duration}}'>
+  <block wx:for='{{cards}}' wx:key='this'>
+    <swiper-item>
+      <view class='card' data-url='{{item.card_route}}'   data-cardId='{{item.card_id}}' hover-class="none" bindtap='jump'>
+        <image src='{{item.card_cover}}' class='card_img'>
+        </image>
+        <view>{{item.card_name}}</view>
+    </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="btn-area">
+  <view class="img1" bindtap="toasta">贺卡</view>
+  <view class="img2" bindtap="toastb">我的</view>
+</view>
+<!-- <view class='next' bindtap='next'></view>
+<view class='last' bindtap='last'></view> -->
+
+<!-- <view class="lead">
+	<radio-group bindchange="radioCheckedChange">
+		<view class="lead_one" bindtap="toasta">
+			<label class="{{radioCheckVal==0?'active1':''}}">
+				贺卡
+	          <radio value="0" hidden="true"></radio>
+	        </label>
+		</view>
+		<view class="lead_two" bindtap="toastb">
+			<label class="{{radioCheckVal==1?'active2':''}}">
+				我的
+	          <radio value="1" hidden="true"></radio>
+	        </label>
+		</view>
+	</radio-group>
+</view> -->

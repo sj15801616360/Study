@@ -1,0 +1,42 @@
+/* pages/christmas/musicList/musicList.wxss */
+
+page {
+  background: #fcf7f7;
+}
+ .mcontent{
+   padding-bottom: 142rpx;
+} 
+.list {
+  display: flex;
+  align-items: center;
+  width: 690rpx;
+  height: 136rpx;
+  font-size: 24rpx;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 36rpx;
+  border-radius: 5px;
+}
+
+.radiocheck {
+  margin-left: 30rpx;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.name {
+  font-size: 32rpx;
+  color: #87768b;
+}
+
+.time {
+  color: #ccbdcf;
+}
+.source{
+  flex: 1;
+  color: #ccbdcf;
+}
+.nameandTime{
+  margin-left:33rpx;
+  flex: 2;
+}

@@ -1,0 +1,94 @@
+<!--pages/happyNewYear/happyNewYear.wxml-->
+<import src="../../../template/qr_code.wxml"/>
+<view class="mcontent" style='display:{{musicshow==1?"block":"none"}}'>
+  <view wx:for="{{list}}" wx:for-index="idx" data-idx="{{idx}}" wx:key="this" class="list" catchtap='check'>
+    <image wx:if="{{item.check}}" src='{{imgurl}}/images/radio_check.png' class="radiocheck"></image>
+    <image wx:else src='{{imgurl}}/images/radio.png' class="radiocheck"></image>
+    <view class="nameandTime">
+      <view class="name">{{item.music_name}}</view>
+      <view class="time">时长:{{item.music_duration}}</view>
+    </view>
+  </view>
+  <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='goback'>确定</view>
+</view>
+
+<view class="content" style='display:{{indexshow==1?"block":"none"}}'    bindtouchstart='pullStart' bindtouchmove='pullMove' bindtouchend='pullEnd'>
+  <image src='{{imgurl}}/images/icon-ny2-bj.jpg' class="background" mode="widthFix"></image>
+  <image src='{{imgurl}}/images/icon-garss-l.png' class="newYear_mh"></image>
+  <image src='{{imgurl}}/images/icon-garss-r.png' class="newYear_grass"></image>
+  <image src='{{imgurl}}/images/icon-ny2-tit.png' class="newYear_title"></image>
+  <image src='{{imgurl}}/images/icon-ny2-bird.png' class="new_dog"></image>
+  <image src='{{imgurl}}/images/icon-snowman.png' class="new_snowman"></image>
+  <image src='{{imgurl}}/images/icon-xh1.png' class="new_xh1 turn"></image>
+  <image src='{{imgurl}}/images/icon-xh2.png' class="new_xh2 reveturn"></image>
+  <image src='{{imgurl}}/images/icon-xh2.png' class="new_xh2_1 reveturn"></image>
+  <image src='{{imgurl}}/images/icon-xh2.png' class="new_xh2_2 turn"></image>
+  <image src='{{imgurl}}/images/icon-xh3.png' class="new_xh3 turn"></image>
+  <image src='{{imgurl}}/images/icon-xh4.png' class="new_xh4 reveturn"></image>
+  <image src='{{imgurl}}/images/music.png' class='music {{play==1?"note_roll":""}}' bindtap='audioPlay'></image>
+
+  <text class='text' style='display:{{hide1==1?"block":"none"}}'>{{content}}</text>
+  <view style='display:{{hide1==1?"none":"block"}}'>
+    <text class='text bac-gray' style='display:{{yy==1?"block":"none"}}' catchtap="dianji">{{content}}</text>
+
+    <textarea style='display:{{wz==1?"none":"block"}}' placeholder-style="color:#5f524a" placeholder="新年快乐，新的一年新的开始，祝大家在新年里事事顺利，天天发财,日日开心，越来越胖~哈哈哈哈哈 ……" bindinput='content'> </textarea>
+  </view>
+  <!-- 播放 -->
+  <!-- <view wx:if="{{recordshow==1}}" class="wx recordshow" bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}</view>
+  <view wx:else class="wx" style='display:{{ccc==1?"none":"block"}}' bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}</view>
+  <view class="amend" style='display:{{ccc==1?"none":"block"}}' catchtap='amend'>修改</view> -->
+
+  <!-- 播放 -->
+  <view wx:if="{{recordshow==1}}" class="wx recordshow" bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}
+     <image src='../../images/playso{{r_play}}.png'></image>
+  </view>
+  <view wx:else class="wx" style='display:{{ccc==1?"none":"block"}}' bindtap="gotoPlay" data-key="{{savedFilePath}}">{{r_timer}}
+      <image src='../../images/playso{{r_play}}.png'></image>
+  </view>
+  <view class="amend" style='display:{{ccc==1?"none":"block"}}' catchtap='amend'>修改</view>
+
+
+
+  <button wx:if="{{enter==0}}" class="btn" open-type="{{share}}" style='display:{{hide1==1?"block":"none"}}' bindtap='user_hide'>{{send}}</button>
+  <!-- 编辑音乐 -->
+  <view class='selectmu' style='display:{{hide1==0?"block":"none"}}' catchtap='tapmusic'>换音乐</view>
+  <view class='preview {{hide1==1?"shownone":"show_up"}}' catchtap='preview'>预览</view>
+
+  <!-- 录音播放弹框 -->
+  <view class="yy" style='display:{{cc==1?"none":"block"}}'>
+    <view class="play">
+      <view class="img1" bindtap="gotoPlay" data-key="{{savedFilePath}}">
+               <image src="../../images/playso{{r_play}}.png"></image>
+      </view>
+    </view>
+    <view class="record">
+      <view class="x" catchtap='close'><image src='../../images/guan02.png'></image></view>
+      <view class="za">按住说话送祝福</view>
+      <view class="zb">{{record}}</view>
+      <view class="img" bindtouchstart="touchdown" bindtouchend="touchup">
+          <view class='rr1 {{recording==1?"running_roll":""}}'></view> 
+          <view class='rr2 {{recording==1?"running_roll":""}}'></view>  
+        <image src="https://www.xingyunxingqiu.cn/resources/images/recordo1.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <template is='qr_code' data='{{...qr_code}}'>
+
+</template>
+</view> 
+<!-- 开场动画-->
+<view class='openanimation {{openanimation}}' style='display:{{indexshow==0?"block":"none"}}'>
+    <image src="../../images/openstart.jpg" class="op-animation-bj"></image>
+    <view>
+      <image src="../../images/openButton.png" class="openButton {{openButton}}" bindtap="buttonClick"></image>
+      <image src="../../images/envelope.png" class="envelope"></image>
+      <image src="../../images/envelopeUp.png" class="envelopeUp {{envelopeUp}}"></image>
+      <view class="jc {{z100}}">
+        <view class="jf {{jf}}">
+          <image src="https://www.xingyunxingqiu.cn/resources/images/hy.png" class="envelopeContent"></image>
+        </view>
+      </view>
+      
+    </view>   
+</view>

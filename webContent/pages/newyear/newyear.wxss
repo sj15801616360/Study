@@ -1,0 +1,361 @@
+@import '../ddemo/ddemo.wxss';
+
+.imagea001{
+  position: absolute;
+  z-index: 9999;
+  width: 130rpx;
+  height: 130rpx;
+  animation-duration:19s;
+}
+.delay_01{
+  animation-delay:0.6s;
+}
+.delay_02{
+  animation-delay:0.8s;
+}
+.delay_03{
+  animation-delay:0s;
+}
+.delay_04{
+  animation-delay:2.2s;
+}
+
+.delay_05{
+  animation-delay:2.6s;
+}
+.delay_06{
+  animation-delay:2.7s;
+}
+.delay_07{
+  animation-delay:4.1s;
+}
+.delay_08{
+  animation-delay:4.4s;
+}
+.delay_09{
+  animation-delay:4.6s;
+}
+.delay_10{
+  animation-delay:6.1s;
+}
+.delay_11{
+  animation-delay:6.3s;
+}
+.delay_12{
+  animation-delay:6.9s;
+}
+.delay_13{
+  animation-delay:8.3s;
+}
+.delay_14{
+  animation-delay:8.6s;
+}
+.delay_15{
+  animation-delay:9s;
+}
+.delay_16{
+  animation-delay:10.3s;
+}
+.delay_17{
+  animation-delay:10.7s;
+}
+.delay_18{
+  animation-delay:10.9s;
+}
+.delay_19{
+  animation-delay:12.4s;
+}
+.delay_20{
+  animation-delay:12.5s;
+}
+.delay_21{
+  animation-delay:12.9s;
+}
+
+.delay_21{
+  animation-delay:14.1s;
+}
+.delay_22{
+  animation-delay:14.3s;
+}
+.delay_23{
+  animation-delay:14.4s;
+}
+.delay_24{
+  animation-delay:16.8s;
+}
+.delay_25{
+  animation-delay:16.9s;
+}
+.delay_26{
+  animation-delay:16s;
+}
+.delay_27{
+  animation-delay:17.4s;
+}
+.delay_28{
+  animation-delay:17s;
+}
+
+
+.delay{
+  animation-delay:1s;
+}
+.delay2{
+  animation-delay:2s;
+}
+.delay3{
+  animation-delay:3s;
+}
+.delay4{
+  animation-delay:4s;
+}
+.delay5{
+  animation-delay:5s;
+}
+.delay6{
+  animation-delay:6s;
+}
+.shownone{
+	height: 0rpx;
+}
+.bac-gray{
+  background:#cccccc;
+}
+.one{
+	background: #f9f4ed;
+}
+.two{
+	background: #f9f4ed;
+}
+.new_one_one{
+  width: 497rpx;
+	text-align: center;
+  height: 107rpx;
+	font-size: 100rpx;
+	color: #ec6438;
+	letter-spacing: 30rpx;
+	line-height: 140rpx;
+	/* margin-top: 154rpx; */
+  margin: 154rpx auto 20rpx auto;
+  display: block;
+}
+.new_one_two{
+	text-align: center;
+	font-size: 40rpx;
+	color: #ec6438;
+	letter-spacing: 5rpx;
+}
+.new_two_one{
+	font-size: 34rpx;
+	color: #e03c2e;
+	width: 380rpx;
+	margin: 45rpx auto 0 auto;
+}
+.yy{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.5);
+  z-index: 199;
+}
+.yy .record{
+   background: #fff;
+   width: 100%;
+   height: 530rpx;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   z-index: 299;
+}
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.yy .record .za{
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 100rpx;
+}
+.yy .record .zb{
+  color: #ec6096;
+  font-size: 22rpx;
+  line-height: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.yy .x{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  color: #000000;
+  width: 47rpx;
+  height: 47rpx;
+}
+.yy .x image{
+  width: 100%;
+  height: 100%;
+}
+.yy .play{
+  margin:450rpx auto 0 auto;
+  width: 256rpx;
+  height: 70rpx;
+}
+.yy .play .img1{
+  width: 100%;
+  height: 100%;
+}
+.yy .play .img1 image{
+  width: 100%;
+  height: 100%;
+}
+.amend{
+  width: 80rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  color: #000;
+  position: absolute;
+  top: 37.5%;
+  right: 120rpx;
+  z-index: 99;
+}
+/*录音播放弹框*/
+.wx{
+  position: absolute;
+  top: 36%;
+  width: 300rpx;
+  height: 82rpx;
+  display: block;
+  left: 28%;
+  /*background: url('https://www.xingyunxingqiu.cn/resources/images/playso.png') no-repeat center;
+  background-size: 100% 100%;*/
+  z-index: 99;
+  /*text-align: left;*/
+  /*padding-left: 50rpx;*/
+  text-indent: 120rpx;
+  line-height: 82rpx;
+  color: #dddddd;
+}
+.new_one_three{
+	width: 120rpx;
+	height: 262rpx;
+	position: absolute;
+	left: 20rpx;
+	top:0rpx;
+}
+.new_one_three2{
+	width: 599rpx;
+	height: 150rpx;
+	position: absolute;
+	top: 70rpx;
+	left: 95rpx;
+}
+.new_one_three3{
+	width: 150rpx;
+	height: 46rpx;
+	position: absolute;
+	right: -28rpx;
+	top: 300rpx;
+}
+.new_one_three4{
+	width: 150rpx;
+	height: 46rpx;
+	position: absolute;
+	left: -50rpx;
+	top: 480rpx;
+}
+.new_one_three5{
+	width: 225rpx;
+	height: 89rpx;
+	position: absolute;
+	left: -50rpx;
+	bottom: 115rpx;
+  z-index: 9;
+}
+.new_one_three6{
+	width: 89rpx;
+	height: 80rpx;
+	position: absolute;
+	left: 86rpx;
+	top: 420rpx;
+}
+.new_one_three7{
+	width: 225rpx;
+	height: 89rpx;
+	position: absolute;
+	right: -165rpx;
+	bottom: 370rpx;
+}
+.new_one_three8{
+	width: 750rpx;
+	height: 645rpx;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 405rpx;
+}
+.new_one_three9{
+	width: 100%;
+	height: 670rpx;
+	position: absolute;
+	bottom: 0rpx;
+	left: 0rpx;
+}
+/* 录音动画 -G*/
+/*-G图片添加新样式*/
+.wx image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1
+}
+.yy .record .img{
+  width: 194rpx;
+  height: 194rpx;
+  margin: 60rpx auto;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+
+}
+.yy .record .img image{
+  width: 100%;
+  height: 100%;
+}
+.rr1,.rr2{
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  border: 2rpx #ec6096 solid;
+  border-radius: 50%;
+  box-shadow: 0 0 10rpx #ec6096;
+  box-sizing: border-box;
+  transform: scale(1);
+}
+.yy .record .img .running_roll{
+  animation: recording 1.5s linear ;
+  animation-iteration-count: infinite
+}
+.yy .record .img .running_roll.rr1{-webkit-animation-delay:0; }
+.yy .record .img .running_roll.rr2{ -webkit-animation-delay:0.75s; }
+@keyframes recording{
+  0% {transform:scale(1);opacty: 0}
+  50% {transform: scale(1.25);opacity: 0.5}
+  99% {transform: scale(1.5);opacity: 0}
+  100% {transform:scale(1);opacity: 0}
+}

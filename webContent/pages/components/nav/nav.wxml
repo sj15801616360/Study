@@ -1,0 +1,3 @@
+<!--pages/components/nav/nav.wxml-->
+<view class="nav" style='display:{{hide1==1?"block":"none"}}' bindtap='user_hide'>使用</view>
+<slot></slot>

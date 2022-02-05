@@ -1,0 +1,19 @@
+<template name='qr_code'>
+  <view class='page6 {{pullUp==1?"pullUp":""}}' style='display:{{showP6==1?"block":"none"}}'>
+    <image src='https://www.xingyunxingqiu.cn/resources/images/close.png' class='close' bindtap='close1'></image>
+    <view class='us_info'>
+      <view class='icon'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/qielogo.png'></image>
+        <text>企鹅贺卡</text>
+      </view>
+      <view class='scan'>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/QR_code.jpg' class='QR_code'></image>
+        <view>扫码关注企鹅贺卡</view>
+      </view>
+      <view class='me_too' bindtap='jumpindex'>
+        <text>我也要制作贺卡</text>
+        <image src='https://www.xingyunxingqiu.cn/resources/images/me_too_button.png'></image>
+      </view>
+    </view>
+  </view>
+</template>

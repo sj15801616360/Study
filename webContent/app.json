@@ -1,0 +1,35 @@
+{
+  "pages": [  
+    
+    "pages/index/index",
+    "pages/sr/sr",
+    "pages/newyear/newyear",
+    "pages/love/love",
+    "pages/annual/annual", 
+    "pages/meet/meet",
+    "pages/birthday_card1/birthday_card1", 
+    "pages/christmas/christmas_index/christmas_index",
+    "pages/wedding1/wedding1",
+    "pages/happyNewYear/newYear_index/newYear_index",
+    "pages/christmas/christmas01_index/christmas01_index",
+    "pages/christmas/christmas02_index/christmas02_index",
+    "pages/ddemo/ddemo",
+    "pages/mine/mine",
+    "pages/birthday/birthday",
+    "pages/blessing/blessing",
+    "pages/invitation/invitation",
+    "pages/reply/reply",
+    "pages/my_card/my_card",
+    "pages/one_card_reply/one_card_reply",
+    "pages/musicList/musicList",
+    "pages/happyNewYear/newYear_tow/ny_tow_index",
+    "pages/happyNewYear/newYear_three/ny_three_index",
+    "pages/happyNewYear/newYear_four/ny_four_index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
