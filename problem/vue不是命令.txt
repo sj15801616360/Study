@@ -1,0 +1,11 @@
+// vue不是内部或者外部命令：
+
+// 从nodejs官网上下载了node的安装包，并安装了node,使用 npm install -g yarn 命令全局安装了yarn， 接着使用 yarn global add @vue/cli 命令，成功安装了全局的 vue-cli
+
+// 验证方法: vue -v 或者 vue --version 查看版本
+
+// 如果不生效的话
+
+// 在计算机中全局搜索 vue.cmd
+
+// 修改 path 编辑环境变量
